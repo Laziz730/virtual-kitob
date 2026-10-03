@@ -1,0 +1,2995 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Kutubxona - Onlayn Kitob Olami</title>
+<meta name="description" content="O'zbek tilidagi eng yirik onlayn kutubxona. 10 000+ kitob, audio kitob va jurnallar. Bepul onlayn o'qing va PDF yuklab oling.">
+<meta name="keywords" content="virtual kutubxona, onlayn kitob, kitob o'qish, bepul kitob, pdf kitob, kutubxona, audio kitob, o'zbek kitoblar, kitobxon">
+<meta name="author" content="VirtualKitob">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://virtualkitob.uz/">
+<meta name="theme-color" content="#4f46e5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VirtualKitob">
+<meta property="og:title" content="Virtual Kutubxona - Onlayn Kitob Olami">
+<meta property="og:description" content="10 000+ kitob, audio kitob va jurnallar — hammasi bitta joyda. Istalgan vaqtda, istalgan qurilmada o'qing.">
+<meta property="og:image" content="icon/book.png">
+<meta property="og:locale" content="uz_UZ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Virtual Kutubxona - Onlayn Kitob Olami">
+<meta name="twitter:description" content="O'zbek tilidagi eng yirik onlayn kutubxona. Bepul kitob o'qing va yuklab oling.">
+<meta name="twitter:image" content="icon/book.png">
+<link rel="icon" type="image/png" href="icon/book.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://yuristakademiya.b-cdn.net">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://virtualkitob.uz/#website",
+      "url": "https://virtualkitob.uz/",
+      "name": "VirtualKutubxona",
+      "alternateName": "VirtualKitob",
+      "description": "O'zbek tilidagi onlayn kutubxona",
+      "inLanguage": "uz-UZ",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://virtualkitob.uz/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Library",
+      "name": "VirtualKutubxona",
+      "url": "https://virtualkitob.uz/",
+      "image": "https://virtualkitob.uz/icon/book.png",
+      "description": "O'zbek tilidagi eng yirik onlayn kutubxona. Minglab kitoblar, audio kitoblar va jurnallar.",
+      "libraryType": "Digital",
+      "inLanguage": "uz"
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --accent: #f59e0b;
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --radius: 16px;
+    --shadow: 0 10px 30px -10px rgba(79, 70, 229, .25);
+  }
+  body.dark {
+    --primary: #818cf8;
+    --primary-dark: #6366f1;
+    --accent: #fbbf24;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --success: #34d399;
+    --danger: #f87171;
+    --shadow: 0 10px 30px -10px rgba(0,0,0,.5);
+  }
+  body.dark .navbar { background: rgba(15,23,42,.85); border-bottom-color: #334155; }
+  body.dark .search-box input { background: #1e293b; border-color: #334155; color: var(--text); }
+  body.dark .search-box input:focus { background: #1e293b; }
+  body.dark .hero { background: linear-gradient(135deg, #111c34 0%, #1a1430 60%, #1c1a10 100%); }
+  body.dark .hero h1 .hl { background: linear-gradient(120deg, #a5b4fc 0%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  body.dark .hero-badge { background: #1e293b; border-color: #334155; }
+  body.dark .hero-book { background: #1e293b; }
+  body.dark .btn-outline { background: #1e293b; border-color: #334155; }
+  body.dark .cat-card { border-color: #334155; }
+  body.dark .cat-card:hover { border-color: #4f46e5; }
+  body.dark .book-card { border-color: #334155; }
+  body.dark .feature { border-color: #334155; }
+  body.dark .badge-acc { background: #451a03; color: #fcd34d; }
+  body.dark .badge-new { background: #064e3b; color: #6ee7b7; }
+  body.dark .tag-green { background: #064e3b; color: #6ee7b7; }
+  body.dark .modal, body.dark .modal-small { background: #1e293b; }
+  body.dark .m-info .mi { background: #0f172a; }
+  body.dark .field { background: #0f172a; border-color: #334155; color: var(--text); }
+  body.dark .field:focus { background: #0f172a; }
+  body.dark .admin-panel { background: #1e293b; }
+  body.dark .ap-head, body.dark .ap-tabs { border-bottom-color: #334155; }
+  body.dark .at { background: #0f172a; color: #94a3b8; }
+  body.dark .icon-btn { background: #334155; color: #e2e8f0; }
+  body.dark .al-row { border-color: #334155; }
+  body.dark .genre-bar .gb-track { background: #334155; }
+  body.dark .switch span { background: #475569; }
+  body.dark .file-drop { border-color: #475569; }
+  body.dark .admin-only-note { background: #451a03; color: #fcd34d; border-color: #78350f; }
+  body.dark .auth-block-msg { background: #7f1d1d; color: #fecaca; border-color: #991b1b; }
+  body.dark .theme-btn { background: #334155; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  input, textarea, select { -webkit-user-select: text; user-select: text; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; -webkit-user-drag: none; user-select: none; }
+
+  /* Navbar */
+  .navbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; padding: 14px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.25rem; }
+.brand-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  display: grid; place-items: center; color: #fff; font-size: 1.3rem;
+}
+.bi-img { display: inline-block; vertical-align: -0.15em; flex-shrink: 0; object-fit: contain; }
+.search-box img.bi-img { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); }
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--primary); color: #fff; padding: 10px 18px; border-radius: 0 0 12px 0; font-weight: 600; z-index: 500; }
+.skip-link:focus { left: 0; }
+.skip-link:focus-visible { outline: none; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+  .brand span b { color: var(--primary); }
+  .nav-links { display: flex; align-items: center; gap: 28px; font-weight: 500; color: var(--muted); font-size: .95rem; }
+  .nav-links a:hover { color: var(--primary); }
+  .search-box { position: relative; }
+  .search-box input {
+    width: 260px; padding: 10px 14px 10px 40px; border: 1px solid #e2e8f0;
+    border-radius: 50px; background: #f8fafc; font-family: inherit; font-size: .9rem; outline: none;
+  }
+  .search-box input:focus { border-color: var(--primary); background: #fff; }
+  .search-box i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+  .nav-btn {
+    background: var(--primary); color: #fff; border: none; padding: 10px 20px;
+    border-radius: 50px; font-family: inherit; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-btn:hover { background: var(--primary-dark); }
+  .theme-btn {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid #e2e8f0;
+    background: #f8fafc; cursor: pointer; display: grid; place-items: center; flex-shrink: 0;
+    transition: .2s; padding: 0;
+  }
+  .theme-btn img { width: 20px; height: 20px; object-fit: contain; }
+  .theme-btn:hover { border-color: var(--primary); transform: rotate(20deg); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 60%, #fefce8 100%);
+    padding: 70px 0;
+  }
+  .hero-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #e0e7ff;
+    color: var(--primary); font-size: .8rem; font-weight: 600; padding: 6px 14px; border-radius: 50px;
+  }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin: 18px 0; }
+  .hero h1 .hl { background: linear-gradient(120deg, var(--primary), #7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { color: var(--muted); font-size: 1.05rem; max-width: 520px; margin-bottom: 28px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
+    border-radius: 50px; font-weight: 600; font-family: inherit; font-size: .95rem; cursor: pointer; border: none;
+  }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { background: var(--primary-dark); }
+  .btn-outline { background: #fff; color: var(--text); border: 1.5px solid #e2e8f0; }
+  .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+  .hero-stats { display: flex; gap: 40px; margin-top: 42px; }
+  .hero-stats .stat b { font-size: 1.7rem; font-weight: 800; display: block; color: var(--primary); }
+  .hero-stats .stat span { color: var(--muted); font-size: .9rem; }
+  .hero-cover { position: relative; }
+  .hero-book {
+    background: #fff; border-radius: 20px; padding: 26px;
+    box-shadow: var(--shadow); display: flex; gap: 20px; align-items: center; max-width: 420px;
+  }
+  .hero-book .bk-cover {
+    width: 130px; height: 180px; border-radius: 12px; flex-shrink: 0;
+    background: linear-gradient(160deg, #4f46e5, #7c3aed);
+    display: grid; place-items: center; color: #fff; font-size: 2.8rem; box-shadow: 0 8px 20px -6px rgba(79,70,229,.5);
+  }
+  .hero-book h3 { margin-bottom: 4px; }
+.hero-book-title { font-size: 1.05rem; line-height: 1.3; margin: 6px 0 4px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .author { color: var(--muted); font-size: .85rem; }
+  .rating { display: flex; align-items: center; gap: 6px; margin: 10px 0; color: var(--accent); font-size: .85rem; }
+  .tag { font-size: .72rem; font-weight: 600; padding: 3px 10px; border-radius: 50px; }
+  .tag-green { background: #d1fae5; color: #047857; }
+
+  /* Sections */
+  .section { padding: 70px 0; }
+  .section-head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 36px; }
+  .section-head h2 { font-size: 1.9rem; font-weight: 800; }
+  .section-head p { color: var(--muted); margin-top: 6px; }
+  .more-link { color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .more-link:hover { gap: 10px; }
+
+  /* Categories */
+  .cats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .cat-card {
+    background: var(--card); border: 1px solid #eef0f6; border-radius: var(--radius);
+    padding: 24px 12px; text-align: center; cursor: pointer; transition: .25s;
+  }
+  .cat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: #e0e7ff; }
+  .cat-icon {
+    width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 12px;
+    display: grid; place-items: center; font-size: 1.4rem; color: #fff;
+  }
+  .cat-card b { font-size: .92rem; font-weight: 600; }
+  .cat-card span { display: block; color: var(--muted); font-size: .75rem; margin-top: 3px; }
+
+  /* Books grid */
+  .books-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .empty-state { grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--muted); background: var(--card); border: 1px dashed #cbd5e1; border-radius: var(--radius); }
+  .empty-state p { font-size: 1.05rem; }
+  body.dark .empty-state { border-color: #334155; }
+  .book-card {
+    background: var(--card); border: 1px solid #eef0f6; border-radius: var(--radius);
+    overflow: hidden; cursor: pointer; transition: .25s; display: flex; flex-direction: column;
+  }
+  .book-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .book-cover {
+    height: 210px; position: relative; display: grid; place-items: center; color: #fff;
+  }
+  .book-cover .bc-ico { font-size: 3rem; }
+  .book-cover .bc-top { position: absolute; top: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; }
+  .badge { font-size: .7rem; font-weight: 600; padding: 4px 10px; border-radius: 50px; background: rgba(255,255,255,.25); backdrop-filter: blur(4px); }
+  .badge-acc { background: #fef3c7; color: #92400e; }
+  .badge-new { background: #d1fae5; color: #047857; }
+  .book-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .book-body h4 { font-size: 1rem; font-weight: 700; }
+  .book-body .meta { color: var(--muted); font-size: .82rem; }
+  .book-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+  .price { font-weight: 800; color: var(--primary); }
+  .btn-small {
+    background: none; border: 1.5px solid #c7d2fe; color: var(--primary); border-radius: 50px;
+    padding: 6px 14px; font-weight: 600; font-size: .78rem; font-family: inherit; cursor: pointer; transition: .2s;
+  }
+  .btn-small:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .rast { animation: slideRast .4s ease-out; }
+  @keyframes slideRast { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+
+  /* Feature strip */
+  .feature-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .feature {
+    background: var(--card); border-radius: var(--radius); padding: 26px; display: flex; gap: 16px; align-items: flex-start;
+    border: 1px solid #eef0f6;
+  }
+  .feature i { font-size: 1.8rem; color: var(--primary); }
+  .feature b { display: block; margin-bottom: 4px; }
+  .feature p { color: var(--muted); font-size: .85rem; }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed; inset: 0; background: rgba(15,23,42,.6); backdrop-filter: blur(6px);
+    display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px;
+  }
+  .modal-backdrop.show { display: flex; }
+  .modal {
+    background: #fff; border-radius: 22px; max-width: 760px; width: 100%;
+    display: grid; grid-template-columns: 260px 1fr; overflow: hidden; max-height: 90vh;
+    animation: popIn .25s ease-out;
+  }
+  .modal:not(.modal-audio) { height: min(90vh, 820px); grid-template-rows: minmax(0, 1fr); }
+  @keyframes popIn { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+  .modal-cover {
+    background-size: cover; background-position: center; min-height: 0;
+    display: grid; place-items: bottom; padding: 20px; align-items: end;
+  }
+  .modal-cover .m-badge { background: rgba(255,255,255,.9); padding: 5px 12px; border-radius: 50px; font-size: .75rem; font-weight: 700; }
+  .modal-body { padding: 32px; display: flex; flex-direction: column; overflow-y: auto; min-height: 0; }
+  .modal-body h2 { font-size: 1.5rem; }
+  .modal-body .author { margin: 4px 0 12px; }
+  .m-rating { display: flex; gap: 14px; color: var(--muted); font-size: .85rem; margin-bottom: 16px; }
+  .m-desc { color: var(--text); margin-bottom: 20px; font-size: .95rem; }
+  .m-info { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; }
+  .m-info .mi { background: #f8fafc; padding: 10px 14px; border-radius: 12px; }
+  .m-info .mi span { color: var(--muted); font-size: .75rem; display: block; }
+  .m-info .mi b { font-size: .9rem; }
+  .modal-close {
+    position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(0,0,0,.5); color: #fff; font-size: 1rem; cursor: pointer;
+  }
+  .modal-wrap { position: relative; }
+
+  /* Footer */
+  footer { background: #0f172a; color: #94a3b8; padding: 60px 0 30px; margin-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+  .footer-grid h5 { color: #fff; margin-bottom: 16px; }
+  .footer-grid a { display: block; margin-bottom: 10px; font-size: .9rem; }
+  .footer-grid a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid #1e293b; padding-top: 20px; display: flex; justify-content: space-between; font-size: .85rem; }
+  .socials { display: flex; gap: 10px; }
+  .socials a {
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid #334155;
+    display: grid; place-items: center; transition: .2s;
+  }
+  .socials a:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+  /* FAQ */
+  .faq-item { background: var(--card); border: 1px solid #eef0f6; border-radius: 14px; margin-bottom: 12px; overflow: hidden; transition: .2s; }
+  .faq-item:hover { border-color: #c7d2fe; }
+  .faq-item summary { list-style: none; cursor: pointer; padding: 16px 20px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-radius: 14px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--primary); transition: .2s; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item .faq-ans { padding: 0 20px 16px; color: var(--muted); font-size: .92rem; }
+  body.dark .faq-item { border-color: #334155; }
+  body.dark .faq-item:hover { border-color: #4f46e5; }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .cats { grid-template-columns: repeat(3, 1fr); }
+    .books-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-inner { grid-template-columns: 1fr; }
+    .feature-strip, .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 2rem; }
+    .cats, .books-grid, .feature-strip { grid-template-columns: 1fr; }
+    .modal { grid-template-columns: 1fr; display: flex; flex-direction: column; }
+    .modal:not(.modal-audio) { grid-template-rows: none; }
+    .modal-cover { min-height: 200px; flex-shrink: 0; }
+    .modal-body { flex: 1; }
+    .search-box { display: none; }
+  }
+/* Admin FAB */
+.admin-fab {
+  position: fixed; bottom: 26px; right: 26px; z-index: 90;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border: none;
+  padding: 14px 20px; border-radius: 50px; font-family: inherit; font-weight: 700; font-size: .92rem;
+  cursor: pointer; box-shadow: 0 12px 30px -8px rgba(0,0,0,.45); transition: .25s;
+}
+.admin-fab:hover { transform: translateY(-3px); }
+.modal-small {
+  background: #fff; border-radius: 20px; width: 100%; max-width: 400px; padding: 30px;
+  position: relative; animation: popIn .25s ease-out; max-height: 90vh; overflow-y: auto;
+}
+.mlogo {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(135deg, #0f172a, #334155); color: #fff;
+  display: inline-grid; place-items: center; font-size: 1.6rem; margin-bottom: 12px;
+}
+.mlogo.small { width: 38px; height: 38px; font-size: 1rem; border-radius: 10px; }
+.muted { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
+.field {
+  width: 100%; padding: 12px 14px; border: 1.5px solid #e2e8f0; border-radius: 12px;
+  font-family: inherit; font-size: .92rem; margin-bottom: 12px; outline: none; background: #f8fafc;
+}
+.field:focus { border-color: var(--primary); background: #fff; }
+textarea.field { resize: vertical; }
+.block { width: 100%; justify-content: center; }
+.hint { color: var(--muted); font-size: .8rem; margin-top: 12px; text-align: center; }
+.hint b { color: var(--primary); }
+.admin-only-note {
+  display: flex; align-items: center; gap: 8px; justify-content: center;
+  background: #fef3c7; color: #92400e; border: 1px solid #fde68a;
+  font-size: .82rem; font-weight: 600; padding: 9px 12px; border-radius: 10px; margin-bottom: 14px;
+}
+.auth-block-msg {
+  display: flex; align-items: center; gap: 8px; justify-content: center;
+  background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca;
+  font-size: .82rem; font-weight: 600; padding: 9px 12px; border-radius: 10px; margin-bottom: 14px;
+}
+.icon-btn {
+  width: 36px; height: 36px; border-radius: 50%; border: none; background: #f1f5f9;
+  color: #334155; cursor: pointer; font-size: 1rem; display: grid; place-items: center;
+}
+/* Admin panel */
+.admin-panel-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,.55); backdrop-filter: blur(4px); z-index: 95; display: none; }
+.admin-panel-backdrop.show { display: flex; justify-content: flex-end; }
+.admin-panel {
+  width: 400px; max-width: 94vw; height: 100%; background: #fff;
+  display: flex; flex-direction: column; animation: slideIn .3s ease-out;
+}
+@keyframes slideIn { from { transform: translateX(60px); opacity: 0; } to { transform: none; opacity: 1; } }
+.ap-head { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border-bottom: 1px solid #eef0f6; }
+.ap-head b { font-size: 1.02rem; }
+.ap-head-l { display: flex; align-items: center; gap: 10px; }
+.ap-head-r { display: flex; gap: 8px; }
+.ap-tabs { display: flex; gap: 6px; padding: 14px 16px; border-bottom: 1px solid #eef0f6; }
+.at {
+  flex: 1; border: none; background: #f1f5f9; color: #64748b; padding: 10px 6px; border-radius: 10px;
+  font-family: inherit; font-weight: 600; font-size: .78rem; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.at i { font-size: 1.05rem; }
+.at.active { background: var(--primary); color: #fff; }
+.ap-body { flex: 1; overflow-y: auto; padding: 20px; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.stat-card { border-radius: 14px; padding: 16px; color: #fff; display: flex; flex-direction: column; gap: 6px; }
+.stat-card i { font-size: 1.4rem; }
+.stat-card b { font-size: 1.5rem; }
+.stat-card span { font-size: .75rem; opacity: .9; }
+.stat-card.blue { background: linear-gradient(135deg, #4f46e5, #6366f1); }
+.stat-card.green { background: linear-gradient(135deg, #10b981, #34d399); }
+.stat-card.purple { background: linear-gradient(135deg, #9333ea, #a855f7); }
+.stat-card.orange { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.stat-card.navy { background: linear-gradient(135deg, #0f172a, #334155); }
+.genre-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: .82rem; }
+.genre-bar .gb-label { width: 96px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.genre-bar .gb-track { flex: 1; height: 10px; background: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.genre-bar .gb-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, #4f46e5, #7c3aed); }
+.genre-bar .gb-val { width: 34px; text-align: right; font-weight: 700; }
+.typo-h4 { margin: 18px 0 12px; }
+.al-row { display: flex; gap: 12px; align-items: center; padding: 12px; border: 1px solid #eef0f6; border-radius: 12px; margin-bottom: 10px; }
+.al-ic { width: 40px; height: 52px; border-radius: 8px; color: #fff; display: grid; place-items: center; font-size: 1.1rem; flex-shrink: 0; }
+.al-info { flex: 1; min-width: 0; }
+.al-info b { font-size: .9rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.al-info span { font-size: .75rem; color: var(--muted); }
+.al-del { border: none; background: #fef2f2; color: #dc2626; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; }
+.al-del:disabled { opacity: .35; cursor: not-allowed; }
+.row2 { display: flex; gap: 12px; align-items: flex-end; justify-content: space-between; }
+.switch { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin-bottom: 12px; cursor: pointer; }
+.switch input { display: none; }
+.switch span { width: 44px; height: 24px; background: #cbd5e1; border-radius: 50px; position: relative; transition: .2s; }
+.switch span::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: .2s; }
+.switch input:checked + span { background: var(--primary); }
+.switch input:checked + span::after { transform: translateX(20px); }
+.file-drop { display: block; box-sizing: border-box; width: 100%; border: 2px dashed #cbd5e1; border-radius: 12px; padding: 20px; text-align: center; color: var(--muted); cursor: pointer; margin-bottom: 14px; transition: .2s; }
+.file-drop:hover { border-color: var(--primary); color: var(--primary); }
+.file-drop i { font-size: 1.8rem; color: #dc2626; display: block; margin-bottom: 6px; }
+.section-label { display: block; font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 8px; margin-top: 4px; }
+.or-divider { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: .78rem; margin-bottom: 12px; }
+.or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+body.dark .or-divider::before, body.dark .or-divider::after { background: #334155; }
+.img-prev {
+  width: 100%; height: 130px; border-radius: 12px; overflow: hidden; object-fit: cover;
+  border: 1px solid #e2e8f0; background: #f8fafc; margin-bottom: 14px;
+}
+body.dark .img-prev { border-color: #334155; background: #0f172a; }
+/* Toast */
+.toast {
+  position: fixed; left: 50%; bottom: 30px; transform: translateX(-50%) translateY(90px);
+  background: #0f172a; color: #fff; padding: 13px 22px; border-radius: 50px; font-size: .9rem;
+  font-weight: 600; z-index: 200; opacity: 0; transition: .35s;
+  box-shadow: 0 14px 30px -8px rgba(0,0,0,.5); display: flex; align-items: center; gap: 8px;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+/* Reader */
+.reader-backdrop {
+  position: fixed; inset: 0; background: #0f172a; backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center; z-index: 300; padding: 0;
+}
+.reader-backdrop.show { display: flex; }
+.reader-wrap {
+  width: 100%; height: 100%; background: var(--card);
+  display: flex; flex-direction: column; animation: slideUp .3s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+.reader-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 12px 20px; border-bottom: 1px solid #eef0f6; flex-shrink: 0;
+}
+body.dark .reader-head { border-bottom-color: #334155; }
+.reader-title { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.reader-title b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.reader-head-r { display: flex; align-items: center; gap: 10px; }
+.reader-body {
+  flex: 1; overflow: auto; background: #f1f3f9; position: relative; display: flex;
+  justify-content: center; padding: 20px;
+}
+body.dark .reader-body { background: #0f172a; }
+.reader-body canvas { background: #fff; box-shadow: 0 6px 24px -8px rgba(0,0,0,.3); max-width: 100%; height: auto; }
+.reader-body .reader-msg { align-self: center; color: var(--muted); font-size: 1.1rem; text-align: center; }
+.reader-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 10px 20px; border-top: 1px solid #eef0f6; flex-shrink: 0;
+}
+body.dark .reader-foot { border-top-color: #334155; }
+.reader-nav { display: flex; align-items: center; gap: 10px; }
+.reader-nav .rbtn {
+  width: 40px; height: 40px; border-radius: 50%; border: 1px solid #e2e8f0; background: var(--card);
+  color: var(--text); font-size: 1.05rem; cursor: pointer; display: grid; place-items: center; transition: .2s;
+}
+body.dark .reader-nav .rbtn { border-color: #334155; }
+.reader-nav .rbtn:hover:not(:disabled) { background: var(--primary); border-color: var(--primary); color: #fff; }
+.reader-nav .rbtn:disabled { opacity: .35; cursor: not-allowed; }
+.reader-progress { flex: 1; max-width: 380px; display: flex; align-items: center; gap: 10px; }
+.reader-progress .rp-bar { flex: 1; height: 10px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+body.dark .reader-progress .rp-bar { background: #334155; }
+.reader-progress .rp-fill { height: 100%; background: linear-gradient(90deg, var(--primary), #7c3aed); border-radius: 10px; transition: .25s; width: 0; }
+.reader-progress span { font-size: .78rem; color: var(--muted); white-space: nowrap; }
+.reader-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); font-size: 1rem; font-weight: 600; }
+.spinner { width: 22px; height: 22px; border: 3px solid #e2e8f0; border-top-color: var(--primary); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+/* O'qilganlar ro'yxati */
+.read-row { display: flex; gap: 12px; align-items: center; padding: 12px; border: 1px solid #eef0f6; border-radius: 12px; margin-bottom: 10px; }
+body.dark .read-row { border-color: #334155; }
+.read-row .rd-ic { width: 40px; height: 52px; border-radius: 8px; background: linear-gradient(160deg,#4f46e5,#7c3aed); color: #fff; display: grid; place-items: center; font-size: 1.1rem; flex-shrink: 0; }
+.read-row .rd-info { flex: 1; min-width: 0; }
+.read-row .rd-info b { font-size: .9rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.read-row .rd-info .rd-pbar { height: 6px; background: #eef0f6; border-radius: 10px; overflow: hidden; margin: 6px 0 4px; }
+body.dark .read-row .rd-info .rd-pbar { background: #334155; }
+.read-row .rd-info .rd-pbar span { display: block; height: 100%; background: linear-gradient(90deg, var(--primary), #7c3aed); border-radius: 10px; }
+.read-row .rd-info .rd-meta { font-size: .75rem; color: var(--muted); }
+.read-row .rd-btn { border: 1.5px solid #c7d2fe; color: var(--primary); background: none; border-radius: 50px; padding: 6px 14px; font-weight: 600; font-size: .78rem; font-family: inherit; cursor: pointer; white-space: nowrap; }
+.read-row .rd-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+@media (max-width: 560px) { .reader-progress { display: none; } .reader-title b { font-size: .85rem; } }
+@media (max-width: 560px) { .admin-fab { bottom: 18px; right: 18px; padding: 12px 16px; } }
+
+/* ---- Filtr paneli ---- */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 22px; padding: 12px; background: var(--card-bg, #fff); border: 1px solid var(--border, #eef2ff); border-radius: 12px; }
+body.dark .filter-bar { background: #1e293b; border-color: #334155; }
+.filter-bar .field { width: auto; min-width: 150px; margin: 0; flex: 1 1 140px; }
+.filter-bar .btn { white-space: nowrap; }
+
+/* ---- Baholash (reyting) ---- */
+.stars { display: inline-flex; gap: 3px; font-size: 1.05rem; cursor: pointer; user-select: none; }
+.stars i { color: #d1d5db; transition: transform .12s ease; }
+.stars i.on { color: #f59e0b; }
+.stars i:hover { transform: scale(1.25); }
+.rate-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 12px; padding: 12px 14px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; }
+body.dark .rate-row { background: #0f172a; border-color: #334155; }
+.rate-row b { font-size: .92rem; }
+.meta .bi-eye { margin-right: 4px; }
+
+/* ---- Izohlar ---- */
+.cmt-box { margin-top: 14px; }
+.cmt-box h4 { font-size: .95rem; margin: 0 0 8px; }
+.cmt-list { max-height: 210px; overflow: auto; display: grid; gap: 8px; margin-bottom: 10px; }
+.cmt-item { padding: 9px 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; }
+body.dark .cmt-item { background: #0f172a; border-color: #1e293b; }
+.cmt-item .cmt-n { font-weight: 700; font-size: .82rem; display: flex; align-items: center; gap: 6px; }
+.cmt-item .cmt-t { font-size: .85rem; color: var(--text, #0f172a); white-space: pre-wrap; word-break: break-word; }
+.cmt-item .cmt-d { font-size: .7rem; color: var(--muted); margin-top: 3px; }
+.cmt-form { display: grid; gap: 8px; grid-template-columns: 1fr 2fr; }
+.cmt-form .field { margin: 0; }
+.cmt-err { font-size: .8rem; color: #ef4444; }
+
+/* ---- Davom etish belgisi ---- */
+.prog-badge { display: inline-block; background: linear-gradient(135deg,#4f46e5,#7c3aed); color: #fff; font-size: .7rem; font-weight: 600; border-radius: 50px; padding: 2px 9px; margin-top: 6px; }
+.lang-sel { padding: 8px 12px; border-radius: 50px; border: 1px solid #e2e8f0; background: #f8fafc; font-family: inherit; font-weight: 700; font-size: .85rem; color: var(--text); cursor: pointer; outline: none; transition: .2s; }
+.lang-sel:hover { border-color: var(--primary); }
+body.dark .lang-sel { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+
+/* ---- AI yordamchi ---- */
+.ai-fab {
+  position: fixed; bottom: 26px; left: 26px; z-index: 91;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff; border: none;
+  display: grid; place-items: center; font-size: 1.5rem; cursor: pointer;
+  box-shadow: 0 12px 30px -8px rgba(124,58,237,.55); transition: .25s;
+}
+.ai-fab:hover { transform: translateY(-3px) scale(1.05); }
+.ai-panel {
+  position: fixed; left: 26px; bottom: 92px; z-index: 92;
+  width: 340px; max-width: 92vw; max-height: 520px; height: min(520px, 70vh);
+  background: var(--card-bg, #fff); border: 1px solid var(--border, #eef2ff);
+  border-radius: 18px; box-shadow: 0 20px 50px -12px rgba(0,0,0,.35);
+  display: none; flex-direction: column; overflow: hidden; animation: popIn .22s ease-out;
+}
+body.dark .ai-panel { background: #111827; border-color: #334155; }
+.ai-panel.show { display: flex; }
+.ai-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 12px 14px; background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff;
+}
+.ai-head b { font-size: .92rem; display: flex; align-items: center; gap: 8px; }
+.ai-head-r { display: flex; gap: 6px; }
+.ai-btn {
+  width: 28px; height: 28px; border-radius: 50%; border: none; background: rgba(255,255,255,.18);
+  color: #fff; cursor: pointer; font-size: .9rem; display: grid; place-items: center; line-height: 1;
+}
+.ai-btn:hover { background: rgba(255,255,255,.32); }
+.ai-msgs { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.ai-row { display: flex; align-items: flex-start; gap: 8px; }
+.ai-row.ai-row-u { flex-direction: row-reverse; }
+.ai-ava { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: .95rem; flex-shrink: 0; margin-top: 2px; }
+.ai-ava-b { background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff; }
+.ai-ava-u { background: #e0e7ff; color: #4f46e5; }
+body.dark .ai-ava-u { background: #1e293b; color: #a5b4fc; }
+.ai-msg { max-width: 85%; padding: 9px 12px; border-radius: 12px; font-size: .84rem; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
+.ai-msg.ai-u { background: var(--primary); color: #fff; border-bottom-right-radius: 4px; }
+.ai-msg.ai-a { background: #f1f5f9; color: var(--text, #0f172a); border-bottom-left-radius: 4px; }
+body.dark .ai-msg.ai-a { background: #1e293b; color: #e2e8f0; }
+.ai-msg.ai-typing { color: var(--muted); font-style: italic; }
+.ai-sugs { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 8px; }
+.ai-sugs button {
+  border: 1.5px solid var(--border, #eef2ff); background: var(--card-bg, #fff); color: var(--text, #0f172a);
+  font-family: inherit; font-size: .75rem; font-weight: 600; border-radius: 50px; padding: 6px 10px;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: .15s;
+}
+body.dark .ai-sugs button { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+.ai-sugs button:hover { border-color: var(--primary); color: var(--primary); }
+.ai-ctx-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin: 0 12px 8px; padding: 7px 10px; background: #fef3c7; color: #92400e;
+  border: 1px solid #fde68a; border-radius: 10px; font-size: .75rem; font-weight: 600;
+}
+body.dark .ai-ctx-bar { background: #332412; color: #fcd34d; border-color: #57421c; }
+.ai-ctx-bar button { border: none; background: none; color: inherit; cursor: pointer; font-size: .85rem; line-height: 1; padding: 2px; }
+.ai-input { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border, #eef2ff); }
+body.dark .ai-input { border-top-color: #334155; }
+.ai-input .field { margin: 0; }
+</style>
+<script src="vendor/pdf.min.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#kontent" data-i18n="skip">Asosiy kontentga o'tish</a>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#">
+      <span class="brand-icon"><i class="bi bi-book-half"></i></span>
+      <span>Virtual<b>Kitob</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Asosiy navigatsiya">
+      <a href="#kategoriyalar" data-i18n="nav_cats">Kategoriyalar</a>
+      <a href="#kitoblar" data-i18n="nav_books">Kitoblar</a>
+      <a href="#yangi" data-i18n="nav_new">Yangi</a>
+      <a href="#xususiyatlar" data-i18n="nav_features">Xususiyatlar</a>
+      <a href="#savol-javob" data-i18n="nav_faq">Savol-javob</a>
+    </nav>
+    <div class="search-box">
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <input type="text" id="searchInput" placeholder="Kitob qidirish..." data-i18n-ph="search_ph" data-i18n-aria="search_ph" aria-label="Kitob qidirish">
+    </div>
+    <select class="lang-sel" id="langSel" aria-label="Til"><option value="uz">UZ</option><option value="ru">RU</option><option value="en">EN</option></select>
+    <button class="nav-btn" onclick="profilAction()" aria-label="Profil"><i class="bi bi-person-fill" aria-hidden="true"></i> <span data-i18n="profile">Profil</span></button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Kun/Tun rejimi" data-i18n-title="theme_title" aria-label="Kun va tun rejimini almashtirish" data-i18n-aria="theme_aria"><img src="icon/moon.png" id="themeIcon" alt=""><span style="display:none">Rejim</span></button>
+  </div>
+</header>
+
+<main id="kontent">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <span class="hero-badge"><i class="bi bi-stars"></i> <span data-i18n="hero_badge">10,000+ onlayn kitob</span></span>
+      <h1><span data-i18n="hero_h1a">O'qish — bu </span><span class="hl" data-i18n="hero_h1b">kashfiyot</span><span data-i18n="hero_h1c"> sari ilk qadam</span></h1>
+      <p data-i18n="hero_p">Minglab kitoblar, audio kitoblar va jurnallar — hammasi bitta joyda. Istalgan vaqtda, istalgan qurilmada o'qing.</p>
+      <div class="hero-actions">
+        <a href="#kitoblar" class="btn btn-primary"><i class="bi bi-collection-play"></i> <span data-i18n="hero_btn_start">O'qishni boshlash</span></a>
+        <a href="#kategoriyalar" class="btn btn-outline"><i class="bi bi-grid"></i> <span data-i18n="hero_btn_cats">Kategoriyalar</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>12K+</b><span data-i18n="hero_s_books">Kitoblar</span></div>
+        <div class="stat"><b>50K+</b><span data-i18n="hero_s_readers">Kitobxonlar</span></div>
+        <div class="stat"><b>4.9</b><span data-i18n="hero_s_rating">O'rtacha baho</span></div>
+      </div>
+    </div>
+    <div class="hero-cover">
+      <div class="hero-book" id="heroBook">
+        <div class="bk-cover" id="heroCover"><i class="bi bi-book" style="font-size:2rem"></i></div>
+        <div id="heroInfo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section" id="kategoriyalar">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2><i class="bi bi-grid my"></i> <span data-i18n="sec_cats">Kategoriyalar</span></h2>
+        <p data-i18n="sec_cats_p">O'zingizga mos yo'nalishni tanlang</p>
+      </div>
+      <a href="#" class="more-link"><span data-i18n="all">Barchasi</span> <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<!-- Books -->
+<section class="section" id="kitoblar">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2><i class="bi bi-star-fill"></i> <span data-i18n="sec_books">Mashhur kitoblar</span></h2>
+        <p data-i18n="sec_books_p">Eng ko'p o'qilayotgan kitoblar</p>
+      </div>
+      <a href="#" class="more-link"><span data-i18n="all">Barchasi</span> <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="filter-bar">
+      <select id="filterGenre" class="field" data-i18n-aria="filter_genre"><option value="" data-i18n="filter_genre">Barcha janrlar</option></select>
+      <select id="filterYear" class="field" data-i18n-aria="filter_year"><option value="" data-i18n="filter_year">Barcha yillar</option></select>
+      <input type="text" id="filterAuthor" class="field" placeholder="Muallif..." data-i18n-ph="filter_author_ph" data-i18n-aria="filter_author_ph" aria-label="Muallif bo'yicha filtr">
+      <button class="btn btn-outline" onclick="resetFilters()"><i class="bi bi-x-circle"></i> <span data-i18n="filter_reset">Tozalash</span></button>
+    </div>
+    <div class="books-grid" id="books"></div>
+  </div>
+</section>
+
+<!-- New arrivals -->
+<section class="section" id="yangi" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2><i class="bi bi-magic"></i> <span data-i18n="sec_new">Yangi qo'shilganlar</span></h2>
+        <p data-i18n="sec_new_p">Haftalik yangi kitoblar</p>
+      </div>
+    </div>
+    <div class="books-grid" id="booksNew"></div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="xususiyatlar" style="padding-top:0">
+  <div class="container">
+    <div class="feature-strip">
+      <div class="feature">
+        <i class="bi bi-infinity"></i>
+        <div><b data-i18n="feat_inf_t">Cheksiz o'qish</b><p data-i18n="feat_inf_p">Hech qanday to'lovsiz istalgancha o'qing</p></div>
+      </div>
+      <div class="feature">
+        <i class="bi bi-phone"></i>
+        <div><b data-i18n="feat_dev_t">Har qurilmada</b><p data-i18n="feat_dev_p">Telefon, planshet va kompyuterda ishlaydi</p></div>
+      </div>
+      <div class="feature">
+        <i class="bi bi-arrow-repeat"></i>
+        <div><b data-i18n="feat_auto_t">Avtokonvert</b><p data-i18n="feat_auto_p">Ketgan joyingizni kitob yodlaydi</p></div>
+      </div>
+      <div class="feature">
+        <i class="bi bi-headphones"></i>
+        <div><b data-i18n="feat_aud_t">Audio kitoblar</b><p data-i18n="feat_aud_p">Quloq soling va ijodiy shug'ullaning</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="savol-javob" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2><i class="bi bi-lightbulb"></i> <span data-i18n="sec_faq">Ko'p so'raladigan savollar</span></h2>
+        <p data-i18n="sec_faq_p">Saytdan foydalanish bo'yicha eng ko'p beriladigan savollar</p>
+      </div>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Kitob ma'lumotlari">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeModal()"><i class="bi bi-x-lg"></i></button>
+    <div class="modal">
+      <div class="modal-cover" id="mCover"></div>
+      <div class="modal-body" id="mBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Audio player -->
+<div class="modal-backdrop" id="audioModal" role="dialog" aria-modal="true" aria-label="Audio kitob tinglash">
+  <div class="modal-wrap">
+    <div class="modal modal-audio" style="max-width:480px">
+      <button class="modal-close" onclick="closeAudio()"><i class="bi bi-x-lg"></i></button>
+      <div style="text-align:center">
+        <span class="mlogo" style="background:linear-gradient(135deg,#f59e0b,#f97316);margin:0 auto 14px"><i class="bi bi-headphones"></i></span>
+        <h2 id="auTitle" style="margin:0 0 6px">Audio kitob</h2>
+        <p class="author" id="auSub" style="margin:0 0 14px"></p>
+      </div>
+      <audio id="auPlayer" controls style="width:100%;margin:4px 0 14px;outline:none"></audio>
+      <button class="btn btn-outline block" onclick="downloadBook()"><i class="bi bi-download"></i> <span data-i18n="au_download">Audio faylni yuklab olish</span></button>
+      <p class="hint" data-i18n="au_hint">Audio kitobni istalgan vaqtda tinglang. Yaxshi eshitish uchun minigarnituradan foydalanish tavsiya etiladi.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Reader -->
+<div class="reader-backdrop" id="readerModal" role="dialog" aria-modal="true" aria-label="Kitob o'qish oynasi">
+  <div class="reader-wrap">
+    <div class="reader-head">
+      <div class="reader-title">
+        <span class="mlogo small" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);flex-shrink:0"><i class="bi bi-book-half"></i></span>
+        <div style="min-width:0">
+          <b id="readerTitle">Kitob o'qish</b>
+          <div style="font-size:.75rem;color:var(--muted)" id="readerSub">Ro'yxatdan o'ting va o'qishni davom ettiring</div>
+        </div>
+      </div>
+      <div class="reader-head-r">
+        <button class="icon-btn" onclick="closeReader()"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="reader-body" id="readerBody">
+      <div class="reader-loading"><span class="spinner"></span> <span data-i18n="rd_loading">Sahifalar yuklanmoqda...</span></div>
+      <canvas id="readerCanvas"></canvas>
+    </div>
+    <div class="reader-foot">
+      <div class="reader-nav">
+        <button class="rbtn" id="rdPrev" onclick="rdPrev()"><i class="bi bi-chevron-left"></i></button>
+        <button class="rbtn" id="rdNext" onclick="rdNext()"><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div class="reader-progress">
+        <span id="rdInfo">0 / 0</span>
+        <div class="rp-bar"><div class="rp-fill" id="rdFill"></div></div>
+        <span id="rdPct">0%</span>
+      </div>
+      <button class="btn-small" onclick="downloadBook()"><i class="bi bi-download"></i> PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<button class="admin-fab" onclick="openAdminAuth()" title="Panel"><i class="bi bi-gear-fill"></i> <span data-i18n="adm_fab">Panel</span></button>
+
+<!-- AI yordamchi -->
+<button class="ai-fab" id="aiFab" onclick="toggleAI()" data-i18n-aria="ai_toggle_aria" aria-expanded="false"><i class="bi bi-robot"></i></button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-modal="true" aria-label="AI yordamchi">
+  <div class="ai-head">
+    <b><i class="bi bi-robot"></i> <span data-i18n="ai_title">AI yordamchi</span></b>
+    <div class="ai-head-r">
+      <button class="ai-btn" onclick="clearAIChat()" data-i18n-title="ai_clear" title="Tozalash"><i class="bi bi-trash"></i></button>
+      <button class="ai-btn" onclick="toggleAI()" data-i18n-aria="ai_close_aria"><i class="bi bi-x-lg"></i></button>
+    </div>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-ctx-bar" id="aiCtxBar" style="display:none">
+    <span id="aiCtxTxt">-</span>
+    <button onclick="clearAICtx()" data-i18n-title="ai_clear" title="Tozalash"><i class="bi bi-x"></i></button>
+  </div>
+  <div class="ai-sugs" id="aiSugs"></div>
+  <form class="ai-input" id="aiForm" onsubmit="event.preventDefault(); askAI()">
+    <input class="field" id="aiText" data-i18n-ph="ai_ph" placeholder="Savolni yozing..." autocomplete="off" aria-label="AI savol">
+    <button class="btn btn-primary" type="submit" style="margin:0;padding:12px 16px"><i class="bi bi-send"></i></button>
+  </form>
+</div>
+
+<div class="modal-backdrop" id="authModal" role="dialog" aria-modal="true" aria-label="Admin panelga kirish">
+  <div class="modal-small">
+    <button class="modal-close" onclick="document.getElementById('authModal').classList.remove('show')"><i class="bi bi-x-lg"></i></button>
+    <div style="text-align:center">
+      <span class="mlogo"><i class="bi bi-shield-lock-fill"></i></span>
+      <h2 data-i18n="adm_login_title">Admin panelga kirish</h2>
+      <p class="muted" data-i18n="adm_login_p">Login va parolni kiriting</p>
+    </div>
+    <div class="admin-only-note"><i class="bi bi-info-circle"></i> <span data-i18n="adm_note">Eslatma: Bu bo'lim faqat adminlar uchun!</span></div>
+    <form onsubmit="event.preventDefault(); adminLogin()">
+      <input class="field" id="authUser" placeholder="Login" data-i18n-ph="adm_login_ph" autocomplete="username" aria-label="Admin login">
+      <input class="field" id="authPass" type="password" placeholder="Parol" data-i18n-ph="adm_pass_ph" autocomplete="current-password" aria-label="Admin paroli">
+      <button class="btn btn-primary block" type="submit"><i class="bi bi-box-arrow-in-right"></i> <span data-i18n="adm_btn_login">Kirish</span></button>
+    </form>
+    <p class="hint" id="authAttemptNote"></p>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="userAuthModal" role="dialog" aria-modal="true" aria-label="Ro'yxatdan o'tish yoki kirish">
+  <div class="modal-small">
+    <button class="modal-close" onclick="document.getElementById('userAuthModal').classList.remove('show')"><i class="bi bi-x-lg"></i></button>
+    <div style="text-align:center">
+      <span class="mlogo"><i class="bi bi-person-lock"></i></span>
+      <h2 id="uaTitle">Ro'yxatdan o'tish</h2>
+    </div>
+    <form onsubmit="event.preventDefault(); uaSubmit()">
+      <div id="uaNameWrap">
+        <input class="field" id="uaName" placeholder="Ismingiz" data-i18n-ph="ua_name_ph" autocomplete="name" aria-label="Ismingiz">
+      </div>
+      <input class="field" id="uaEmail" placeholder="Email" data-i18n-ph="ua_email_ph" type="email" autocomplete="email" aria-label="Email manzilingiz">
+      <input class="field" id="uaPass" type="password" placeholder="Parol" data-i18n-ph="ua_pass_ph" autocomplete="new-password" aria-label="Parolingiz">
+      <button class="btn btn-primary block" type="submit"><span id="uaBtnText"><i class="bi bi-person-plus-fill"></i> Ro'yxatdan o'tish</span></button>
+    </form>
+    <p class="hint"><a href="#" id="uaToggleText" onclick="uaToggle(event)" style="color:var(--primary)">Hisobingiz bormi? Kirish</a></p>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="profileModal" role="dialog" aria-modal="true" aria-label="Foydalanuvchi profili">
+  <div class="modal-small" style="max-width:460px">
+    <button class="modal-close" onclick="document.getElementById('profileModal').classList.remove('show')"><i class="bi bi-x-lg"></i></button>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px">
+      <span class="mlogo" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><i class="bi bi-person-fill"></i></span>
+      <div>
+        <h2 id="pfName" style="font-size:1.2rem">Profil</h2>
+        <p class="muted" id="pfEmail" style="margin-bottom:0"></p>
+      </div>
+    </div>
+    <h4 class="typo-h4" data-i18n="p_reads">O'qilgan kitoblar</h4>
+    <div id="pfReads"></div>
+    <button class="btn btn-outline block" onclick="profileLogout()" style="margin-top:6px"><i class="bi bi-box-arrow-left"></i> <span data-i18n="p_logout">Chiqish</span></button>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="warnModal" role="dialog" aria-modal="true" aria-label="Taqiqlangan amal">
+  <div class="modal-small" style="max-width:360px">
+    <button class="modal-close" onclick="closeWarn()"><i class="bi bi-x-lg"></i></button>
+    <div style="text-align:center">
+      <span class="mlogo" style="background:linear-gradient(135deg,#ef4444,#b91c1c)"><i class="bi bi-exclamation-circle"></i></span>
+      <h2 data-i18n="warn_title">Taqiqlangan</h2>
+      <p class="muted" data-i18n="warn_body">Kod manbasini ko'rish va texnik amallar yopiq. Sayt himoyalangan.</p>
+    </div>
+    <button class="btn btn-primary block" style="background:linear-gradient(135deg,#ef4444,#b91c1c);color:#fff" onclick="closeWarn()"><i class="bi bi-shield-lock-fill"></i> <span data-i18n="warn_close">Yopish</span></button>
+    <p class="hint" data-i18n="warn_hint">Sahifadan foydalanish davom etadi: o'qish, tinglash, yuklab olib CDN dan foydalaning.</p>
+  </div>
+</div>
+
+<div class="admin-panel-backdrop" id="adminPanel">
+  <aside class="admin-panel" role="dialog" aria-modal="true" aria-label="Admin panel">
+    <div class="ap-head">
+      <div class="ap-head-l">
+        <span class="mlogo small" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><i class="bi bi-gear-fill"></i></span>
+        <b><span data-i18n="adm_panel">Admin panel</span></b>
+      </div>
+      <div class="ap-head-r">
+        <button class="icon-btn" onclick="logoutAdmin()" title="Chiqish"><i class="bi bi-box-arrow-left"></i></button>
+        <button class="icon-btn" onclick="closeAdminPanel()"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="ap-tabs">
+      <button class="at active" data-tab="stats" onclick="showTab('stats',this)"><i class="bi bi-bar-chart-fill"></i> <span data-i18n="adm_stats">Statistika</span></button>
+      <button class="at" data-tab="list" onclick="showTab('list',this)"><i class="bi bi-collection-fill"></i> <span data-i18n="adm_books">Kitoblar</span></button>
+      <button class="at" data-tab="cats" onclick="showTab('cats',this)"><i class="bi bi-tags-fill"></i> <span data-i18n="adm_cats">Kategoriya</span></button>
+      <button class="at" data-tab="add" onclick="showTab('add',this)"><i class="bi bi-plus-circle-fill"></i> <span data-i18n="adm_add">Qo'shish</span></button>
+    </div>
+    <div class="ap-body">
+      <div id="tab-stats"></div>
+      <div id="tab-list" style="display:none"></div>
+      <div id="tab-cats" style="display:none">
+        <h4 class="typo-h4" style="margin-top:0" data-i18n="adm_new_cat">Yangi kategoriya qo'shish</h4>
+        <input class="field" id="cName" placeholder="Kategoriya nomi" data-i18n-ph="adm_cat_name_ph" aria-label="Yangi kategoriya nomi">
+        <select class="field" id="cIcon" aria-label="Kategoriya ikonasi">
+          <option value="bi-book">Kitob</option>
+          <option value="bi-journal-bookmark-fill">Jurnal</option>
+          <option value="bi-capsule">Ilmiy</option>
+          <option value="bi-cpu">Texnika</option>
+          <option value="bi-heart-pulse">Tibbiyot</option>
+          <option value="bi-lightbulb">Biznes</option>
+          <option value="bi-globe2">Geografiya</option>
+          <option value="bi-mortarboard">Ta'lim</option>
+          <option value="bi-palette">San'at</option>
+          <option value="bi-music-note-beamed">Musiqa</option>
+          <option value="bi-emoji-smile">Bolalar</option>
+          <option value="bi-headphones">Audio</option>
+        </select>
+        <input class="field" id="cColor" type="color" value="#4f46e5" data-i18n-title="adm_cat_color" title="Rang tanlash">
+        <button class="btn btn-primary block" onclick="addCategory()"><i class="bi bi-tag"></i> <span data-i18n="adm_cat_add">Kategoriya qo'shish</span></button>
+        <h4 class="typo-h4" id="catListTitle">Mavjud kategoriyalar ({0})</h4>
+        <div id="catAdminList"></div>
+      </div>
+      <div id="tab-add" style="display:none">
+        <h4 class="typo-h4" style="margin-top:0" data-i18n="adm_new_book">Yangi kitob qo'shish</h4>
+        <input class="field" id="fTitle" placeholder="Kitob nomi" data-i18n-ph="adm_title_ph" aria-label="Kitob nomi">
+        <input class="field" id="fAuthor" placeholder="Muallif (kim yozgan)" data-i18n-ph="adm_author_ph" aria-label="Muallifning ismi">
+        <div class="row2">
+          <input class="field" id="fYear" type="number" min="1900" max="2100" placeholder="Nashr yili (mas. 2024)" data-i18n-ph="adm_year_ph" aria-label="Nashr yili">
+          <input class="field" id="fVolume" type="text" placeholder="Jild (mas. 1-jild)" data-i18n-ph="adm_volume_ph" aria-label="Jild">
+        </div>
+        <textarea class="field" id="fAbout" rows="3" placeholder="Kitob haqida (about)" data-i18n-ph="adm_about_ph" aria-label="Kitob haqida ma'lumot"></textarea>
+        <select class="field" id="fGenre" aria-label="Janrni tanlang">
+          <option>Badiiy</option><option>Ilmiy</option><option>Dasturlash</option>
+          <option>Tibbiyot</option><option>Tarix</option><option>Biznes</option>
+          <option>Audio</option>
+          <option>Bolalar</option>
+        </select>
+        <div class="row2">
+          <input class="field" id="fPrice" type="number" min="0" value="0" placeholder="Narxi (0 = bepul)" data-i18n-ph="adm_price_ph" aria-label="Kitob narxi">
+          <label class="switch"><input type="checkbox" id="fFree" checked><span></span> <span data-i18n="adm_free">Bepul</span></label>
+        </div>
+        <label class="section-label" data-i18n="adm_cover_label">Kitob muqovasi (rasm)</label>
+        <input class="field" id="fImageUrl" placeholder="Rasm URL manzilini yozing (link)" data-i18n-ph="adm_img_url_ph" aria-label="Muqova rasm URL manzili">
+        <div class="or-divider"><span data-i18n="adm_or">yoki</span></div>
+        <label class="file-drop" for="fImageFile">
+          <i class="bi bi-images"></i>
+          <span id="fImageName">Galereyadan rasm tanlang</span>
+          <input type="file" id="fImageFile" accept="image/*" hidden>
+        </label>
+        <div id="fImagePrev" class="img-prev" style="display:none"></div>
+        <label class="file-drop" for="fPdf">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span id="fPdfName">PDF faylni tanlang</span>
+          <input type="file" id="fPdf" accept="application/pdf,.pdf" hidden>
+        </label>
+        <button class="btn btn-outline block" id="aiDescBtn" style="display:none" onclick="aiDescFromPdf()"><i class="bi bi-magic"></i> <span data-i18n="adm_ai_desc">AI yordamida tavsif</span></button>
+        <div class="or-divider"><span data-i18n="adm_or">yoki</span></div>
+        <label class="file-drop" for="fAudio">
+          <i class="bi bi-headphones"></i>
+          <span id="fAudioName">Audio fayl tanlang (MP3)</span>
+          <input type="file" id="fAudio" accept="audio/*,.mp3,.m4a" hidden>
+        </label>
+        <div class="or-divider"><span data-i18n="adm_or">yoki</span></div>
+        <label class="file-drop" for="fVideo">
+          <i class="bi bi-collection-play"></i>
+          <span id="fVideoName">Video fayl tanlang (MP4)</span>
+          <input type="file" id="fVideo" accept="video/*,.mp4,.m4v,.webm,.ogv" hidden>
+        </label>
+        <p class="hint" style="text-align:left" data-i18n="adm_add_hint">Eslatma: Kitob, audio yoki video — kamida bittasini tanlang. Audio va video kitoblar tinglash va ko'rish uchun mo'ljallangan.</p>
+        <button class="btn btn-primary block" onclick="addBook()"><i class="bi bi-cloud-arrow-up"></i> <span data-i18n="adm_upload_btn">Kitobni yuklash</span></button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#">
+          <span class="brand-icon"><i class="bi bi-book-half"></i></span>
+          <span style="color:#fff">Virtual<b style="color:#818cf8">Kitob</b></span>
+        </a>
+        <p style="margin-top:14px" data-i18n="f_tag">O'zbek tilidagi eng yirik onlayn kutubxona. Bilim — eng buyuk boylik.</p>
+        <p style="margin-top:10px;font-size:.85rem">Email: info@virtualkitob.uz<br>Tel: +998 71 200 00 00<br>Toshkent sh., O'zbekiston</p>
+      </div>
+      <div>
+        <h5 data-i18n="f_site">Sayt</h5>
+        <a href="#" data-i18n="f_home">Bosh sahifa</a>
+        <a href="#kitoblar" data-i18n="nav_books">Kitoblar</a>
+        <a href="#kategoriyalar" data-i18n="nav_cats">Kategoriyalar</a>
+        <a href="#savol-javob" data-i18n="nav_faq">Savol-javob</a>
+      </div>
+      <div>
+        <h5 data-i18n="f_help">Yordam</h5>
+        <a href="#savol-javob" data-i18n="f_faq2">FAQ</a>
+        <a href="#savol-javob" data-i18n="f_guide">Qo'llanma</a>
+        <a href="#savol-javob" data-i18n="f_rights">Mualliflik huquqi</a>
+      </div>
+      <div>
+        <h5 data-i18n="f_social">Ijtimoiy tarmoqlar</h5>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="f_bottom">&copy; 2026 VirtualKitob. Barcha huquqlar himoyalangan.</span>
+      <span>Made with <i class="bi bi-heart-fill" style="color:#ef4444"></i> in Uzbekistan</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  const dark = document.body.classList.toggle('dark');
+  localStorage.setItem('vs_theme', dark ? 'dark' : 'light');
+  updateThemeIcon(dark);
+  applyIcons();
+}
+function updateThemeIcon(dark) {
+  const img = document.getElementById('themeIcon');
+  if (img) img.src = dark ? 'icon/sun.png' : 'icon/moon.png';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('vs_theme');
+  const dark = saved === 'dark';
+  document.body.classList.toggle('dark', dark);
+  updateThemeIcon(dark);
+});
+const gradients = [
+  'linear-gradient(160deg,#4f46e5,#7c3aed)',
+  'linear-gradient(160deg,#0ea5e9,#6366f1)',
+  'linear-gradient(160deg,#f59e0b,#ef4444)',
+  'linear-gradient(160deg,#10b981,#0ea5e9)',
+  'linear-gradient(160deg,#ec4899,#8b5cf6)',
+  'linear-gradient(160deg,#f43f5e,#a855f7)',
+  'linear-gradient(160deg,#14b8a6,#4f46e5)',
+  'linear-gradient(160deg,#d946ef,#f59e0b)'
+];
+
+const categories = [
+  { icon: 'bi-journal-bookmark-fill', name: 'Badiiy', count: 2450, color: '#4f46e5' },
+  { icon: 'bi-capsule', name: 'Ilmiy', count: 1280, color: '#0ea5e9' },
+  { icon: 'bi-cpu', name: 'Dasturlash', count: 690, color: '#f59e0b' },
+  { icon: 'bi-heart-pulse', name: 'Tibbiyot', count: 480, color: '#10b981' },
+  { icon: 'bi-book', name: 'Tarix', count: 910, color: '#ec4899' },
+  { icon: 'bi-lightbulb', name: 'Biznes', count: 530, color: '#d946ef' }
+];
+
+const books = [];
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function jsAttr(s) {
+  return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+// ---- Ko'p tillik (uz / ru / en) ----
+const LANGS = {
+  uz: {
+    title: "Virtual Kutubxona - Onlayn Kitob Olami",
+    desc: "O'zbek tilidagi eng yirik onlayn kutubxona. 10 000+ kitob, audio kitob va jurnallar. Bepul onlayn o'qing va PDF yuklab oling.",
+    skip: "Asosiy kontentga o'tish",
+    nav_cats: "Kategoriyalar", nav_books: "Kitoblar", nav_new: "Yangi", nav_features: "Xususiyatlar", nav_faq: "Savol-javob",
+    search_ph: "Kitob qidirish...", profile: "Profil",
+    theme_title: "Kun/Tun rejimi", theme_aria: "Kun va tun rejimini almashtirish",
+    hero_badge: "10,000+ onlayn kitob",
+    hero_h1a: "O'qish — bu ", hero_h1b: "kashfiyot", hero_h1c: " sari ilk qadam",
+    hero_p: "Minglab kitoblar, audio kitoblar va jurnallar — hammasi bitta joyda. Istalgan vaqtda, istalgan qurilmada o'qing.",
+    hero_btn_start: "O'qishni boshlash", hero_btn_cats: "Kategoriyalar",
+    hero_s_books: "Kitoblar", hero_s_readers: "Kitobxonlar", hero_s_rating: "O'rtacha baho",
+    sec_cats: "Kategoriyalar", sec_cats_p: "O'zingizga mos yo'nalishni tanlang",
+    sec_books: "Mashhur kitoblar", sec_books_p: "Eng ko'p o'qilayotgan kitoblar",
+    sec_new: "Yangi qo'shilganlar", sec_new_p: "Haftalik yangi kitoblar",
+    sec_feat: "Xususiyatlar",
+    sec_faq: "Ko'p so'raladigan savollar", sec_faq_p: "Saytdan foydalanish bo'yicha eng ko'p beriladigan savollar",
+    all: "Barchasi",
+    filter_genre: "Barcha janrlar", filter_year: "Barcha yillar", filter_author_ph: "Muallif...", filter_reset: "Tozalash",
+    feat_inf_t: "Cheksiz o'qish", feat_inf_p: "Hech qanday to'lovsiz istalgancha o'qing",
+    feat_dev_t: "Har qurilmada", feat_dev_p: "Telefon, planshet va kompyuterda ishlaydi",
+    feat_auto_t: "Avtokonvert", feat_auto_p: "Ketgan joyingizni kitob yodlaydi",
+    feat_aud_t: "Audio kitoblar", feat_aud_p: "Quloq soling va ijodiy shug'ullaning",
+    f_nothing: "Hech narsa topilmadi... Filtrni o'zgartiring.",
+    f_empty: "Hozircha kitoblar yo'q.", f_empty_hint: "Admin panel orqali kitob qo'shing.",
+    f_new_empty: "Hozircha yangi kitoblar yo'q. Admin panel orqali kitob qo'shing.",
+    kitob: "kitob", soum: "so'm", pages_unit: "bet", audio_unit: "Audio kitob", video_unit: "Video darslik",
+    free_badge: "Bepul", paid_badge: "Pullik", new_badge: "Yangi", to_read: "Ichiga",
+    continue_pct: "Davom etish: {0}%", read_pct: "{0}% o'qildi",
+    m_views: "{0} ko'rish",
+    m_rate_your: "Kitobni baholang", m_rate_avg: "{0} / 5 ({1} ta baho)", m_rate_avg_none: "Hali baho yo'q — birinchi bo'lib baholang",
+    m_comments: "Izohlar ({0})", cmt_name_ph: "Ismingiz", cmt_text_ph: "Izohingizni yozing...", cmt_submit: "Izoh qoldirish",
+    cmt_none: "Hozircha izohlar yo'q. Birinchi bo'lib yozing!", err_cmt_text: "Izoh yozing", toast_cmt_added: "Izohingiz qo'shildi",
+    dl_btn_free: "Bepul yuklab olish", dl_btn_buy: "Sotib olib yuklash", dl_btn_reg: "Ro'yxatdan o'tish va yuklash",
+    rd_btn_audio: "Tinglash", rd_btn_read: "Onlayn o'qish", rd_btn_video: "Ko'rish",
+    m_price: "Narxi", m_format: "Format", m_genre: "Janr", m_lang: "Til", m_lang_val: "O'zbekcha",
+    m_dl_hint_logged: "Saytda onlayn o'qish, tinglash yoki yuklab olish mumkin",
+    m_dl_hint_anon: "O'qish/tinglash uchun birinchi ro'yxatdan o'tishingiz kerak",
+    au_sub: "Audio kitob", au_download: "Audio faylni yuklab olish",
+    au_hint: "Audio kitobni istalgan vaqtda tinglang. Yaxshi eshitish uchun minigarnituradan foydalanish tavsiya etiladi.",
+    vd_download: "Video faylni yuklab olish",
+    vd_hint: "Videoni to'liq ekranda ko'rish uchun player ichidagi kengaytirish tugmasidan foydalaning.",
+    rd_title: "Kitob o'qish", rd_sub: "Ro'yxatdan o'ting va o'qishni davom ettiring", rd_loading: "Sahifalar yuklanmoqda...",
+    rd_err: "PDF o'qishda xatolik: {0}",
+    p_title: "Profil", p_reads: "O'qilgan kitoblar", p_noreads: "Hali hech qanday kitob o'qilmagan",
+    p_pct_read: "{0}% o'qildi · {1} / {2} sahifa", p_continue: "Davom etish", p_logout: "Chiqish",
+    ua_reg: "Ro'yxatdan o'tish", ua_login: "Kirish",
+    ua_toggle_reg: "Hisobingiz bormi? Kirish", ua_toggle_login: "Hisobingiz yo'qmi? Ro'yxatdan o'tish",
+    ua_name_ph: "Ismingiz", ua_email_ph: "Email", ua_pass_ph: "Parolingiz",
+    err_email: "To'g'ri email kiriting", err_pass_short: "Parol kamida 4 ta belgidan iborat bo'lsin",
+    err_name: "Ismingizni kiriting", err_email_used: "Bu email allaqachon ro'yxatdan o'tgan",
+    err_auth_bad: "Email yoki parol noto'g'ri",
+    toast_welcome: "Xush kelibsiz, {0}!", toast_logged_in: "Tizimga kirdingiz", toast_logged_out: "Tizimdan chiqdingiz",
+    dl_audio_ok: "Audio kitob yuklab olindi", dl_book_ok: "Kitob yuklab olindi", dl_err: "Yuklab olishda xato: {0}",
+    adm_panel: "Admin panel", adm_fab: "Panel", adm_stats: "Statistika", adm_books: "Kitoblar", adm_cats: "Kategoriya", adm_add: "Qo'shish",
+    adm_login_title: "Admin panelga kirish", adm_login_p: "Login va parolni kiriting",
+    adm_note: "Eslatma: Bu bo'lim faqat adminlar uchun!", adm_login_ph: "Login", adm_pass_ph: "Parol", adm_btn_login: "Kirish",
+    adm_new_cat: "Yangi kategoriya qo'shish", adm_cat_name_ph: "Kategoriya nomi", adm_cat_color: "Rang tanlash",
+    adm_cat_add: "Kategoriya qo'shish", adm_cat_list: "Mavjud kategoriyalar ({0})",
+    adm_std: "Standart", adm_del_title: "O'chirish",
+    adm_new_book: "Yangi kitob qo'shish", adm_title_ph: "Kitob nomi", adm_author_ph: "Muallif (kim yozgan)",
+    adm_year_ph: "Nashr yili (mas. 2024)", adm_volume_ph: "Jild (mas. 1-jild)", adm_about_ph: "Kitob haqida (about)",
+    adm_price_ph: "Narxi (0 = bepul)", adm_free: "Bepul", adm_cover_label: "Kitob muqovasi (rasm)",
+    adm_img_url_ph: "Rasm URL manzilini yozing (link)", adm_or: "yoki", adm_img_pick: "Galereyadan rasm tanlang",
+    adm_pdf_pick: "PDF faylni tanlang", adm_audio_pick: "Audio fayl tanlang (MP3)", adm_video_pick: "Video fayl tanlang (MP4)",
+    adm_add_hint: "Eslatma: Kitob, audio yoki video — kamida bittasini tanlang. Audio va video kitoblar tinglash va ko'rish uchun mo'ljallangan.",
+    adm_upload_btn: "Kitobni yuklash", adm_total: "Jami: {0} ta kitob", adm_demo: "Demo",
+    adm_s_total: "Jami kitoblar", adm_s_dl: "Yuklab olishlar", adm_s_users: "Foydalanuvchilar", adm_s_free: "Bepul kitoblar",
+    adm_s_views: "Ko'rilgan kitoblar", adm_s_genre: "Janrlar bo'yicha kitoblar", adm_s_userlist: "Foydalanuvchilar ro'yxati",
+    adm_no_users: "Hozircha foydalanuvchilar yo'q",
+    toast_admin_welcome: "Admin panelga xush kelibsiz",
+    adm_block_hint: "3 marta xato kiritildi, panel {0} soatga bloklangan. To'g'ri parol blokni ochadi",
+    adm_block24_msg: "3 marta xato! Panel {0} soatga bloklandi. To'g'ri parol yozsangiz ochiladi",
+    adm_block24_toast: "Paneldan 24 soatga bloklandiz!",
+    toast_pass_blocked: "Parol xato! Panel bloklangan",
+    hint_bad_login: "Login yoki parol xato! Yana {0} ta urinish qoldi",
+    toast_bad_login: "Login yoki parol xato! {0} ta urinish qoldi",
+    toast_admin_out: "Admin paneldan chiqdiz",
+    toast_cat_name: "Kategoriya nomini kiriting", toast_cat_exists: "Bu kategoriya allaqachon mavjud",
+    toast_cat_added: "Kategoriya qo'shildi: {0}", toast_cat_std: "Bu standart kategoriya, o'chirib bo'lmaydi",
+    confirm_del_cat: "'{0}' kategoriyasini o'chirasizmi?", toast_cat_del: "Kategoriya o'chirildi",
+    toast_add_busy: "Hozir kitob yuklanmoqda, kuting...", toast_book_title: "Kitob nomini kiriting",
+    toast_book_author: "Muallifni kiriting", toast_book_file: "PDF yoki audio faylni tanlang",
+    toast_book_cover: "Muqova rasmini kiriting yoki tanlang",
+    confirm_dup: "Bu kitob allaqachon bor: \"{0}\". Qanday bo'lmasin yana qo'shamizmi?",
+    toast_dup_no: "Qo'shilmadi — bunday kitob allaqachon mavjud",
+    toast_uploading: "CDN ga yuklanmoqda...", toast_upload_err: "Yuklashda xato: {0}",
+    toast_book_added: "Kitob muvaffaqiyatli qo'shildi!", confirm_del_book: "'{0}' kitobini o'chirmoqchimisiz?",
+    toast_book_del: "Kitob o'chirildi", toast_demo: "Bu demo kitob, uni o'chirib bo'lmaydi",
+    toast_audio_nf: "Audio fayl topilmadi",
+    warn_title: "Taqiqlangan", warn_body: "Kod manbasini ko'rish va texnik amallar yopiq. Sayt himoyalangan.",
+    warn_close: "Yopish", warn_hint: "Sahifadan foydalanish davom etadi: o'qish, tinglash, yuklab olib CDN dan foydalaning.",
+    f_tag: "O'zbek tilidagi eng yirik onlayn kutubxona. Bilim — eng buyuk boylik.",
+    f_site: "Sayt", f_home: "Bosh sahifa", f_help: "Yordam", f_faq2: "FAQ", f_guide: "Qo'llanma", f_rights: "Mualliflik huquqi",
+    f_social: "Ijtimoiy tarmoqlar", f_bottom: "© 2026 VirtualKitob. Barcha huquqlar himoyalangan.",
+    lang_label: "Til",
+    faq1q: "Kitoblarni qanday o'qish mumkin?", faq1a: "Mashhur kitoblar bo'limidan istalgan kitobni tanlab, 'Onlayn o'qish' tugmasini bosing. Avval ro'yxatdan o'tishingiz kerak.",
+    faq2q: "Yuklab olish uchun to'lov kerakmi?", faq2a: "Yo'q! Barcha kitoblar bepul. PDF formatida yuklab olishingiz ham mumkin.",
+    faq3q: "O'qish tarixi saqlanadimi?", faq3a: "Ha. Profilingizda o'qilgan kitoblar va oxirgi o'qilgan sahifa avtomatik saqlanadi — davom etish tugmasi bilan qolgan joyingizdan boshlaysiz.",
+    faq4q: "Sayt telefonda ishlaydimi?", faq4a: "Ha. Sayt to'liq moslashuvchan (responsive) — telefon, planshet va kompyuterda bir xil yaxshi ko'rinadi.",
+    faq5q: "Yangi kitob qanday qo'shiladi?", faq5a: "Sahifaning pastki o'ng burchagidagi 'Panel' tugmasi orqali admin panelga kiring va kitob muqovasi hamda PDF faylini yuklang.",
+    faq6q: "Kun va tun rejimi bormi?", faq6a: "Ha. Yuqoridagi kun/tun tugmasi yoki sahifa tilini o'zgartirish tugmasi orqali qulay rejimni tanlang — tanlovingiz saqlanib qoladi.",
+    ai_title: "AI yordamchi",
+    ai_greet: "Assalomu alaykum! Men VirtualKitob sun'iy intellekt yordamchisiman. Kitoblar haqida istalgan savolni bering — masalan \"Bu kitob nima haqida?\".",
+    ai_ph: "Savolni yozing...",
+    ai_send: "Yuborish",
+    ai_you: "Siz",
+    ai_ctx_none: "Kitob tanlanmagan",
+    ai_ctx_book: "Joriy kitob: {0}",
+    ai_clear: "Tozalash",
+    ai_thinking: "O'ylamoqda...",
+    ai_reading: "Kitob matni o'qilmoqda...",
+    ai_read_fail: "Kitob matnini o'qib bo'lmadi (skanlangan PDF bo'lishi mumkin). Umumiy bilimlarimga tayanib javob beraman.",
+    ai_err: "Xatolik yuz berdi. AI javob bera olmadi.",
+    ai_close_aria: "AI yordamchi panelini yopish",
+    ai_toggle_aria: "AI yordamchini ochish yoki yopish",
+    ai_sug1: "Bu kitob nima haqida?",
+    ai_sug2: "Kitob tavsiya qiling",
+    ai_sug3: "Kitob qanday yuklab olinadi?",
+    adm_ai_desc: "AI yordamida tavsif",
+    adm_ai_desc_busy: "AI tavsif tayyorlamoqda...",
+    adm_ai_desc_ok: "Tavsif yaratildi!",
+    adm_ai_desc_err: "AI tavsif bera olmadi.",
+    adm_ai_desc_offline: "Mahalliy AI (Ollama) o'chirilgan",
+    adm_ai_desc_pdf: "Avval PDF faylni tanlang",
+    adm_ai_desc_local: "AI tavsif faqat mahalliy serverda ishlaydi"
+  },
+  ru: {
+    title: "Виртуальная библиотека - Мир книг онлайн",
+    desc: "Крупнейшая онлайн-библиотека на узбекском языке. 10 000+ книг, аудиокниг и журналов. Читайте онлайн бесплатно и скачивайте PDF.",
+    skip: "Перейти к основному содержанию",
+    nav_cats: "Категории", nav_books: "Книги", nav_new: "Новинки", nav_features: "Возможности", nav_faq: "Вопросы",
+    search_ph: "Поиск книг...", profile: "Профиль",
+    theme_title: "День/Ночь режим", theme_aria: "Переключить день и ночь",
+    hero_badge: "10,000+ книг онлайн",
+    hero_h1a: "Чтение — это ", hero_h1b: "открытие", hero_h1c: " — первый шаг",
+    hero_p: "Тысячи книг, аудиокниг и журналов — всё в одном месте. Читайте в любое время, на любом устройстве.",
+    hero_btn_start: "Начать читать", hero_btn_cats: "Категории",
+    hero_s_books: "Книги", hero_s_readers: "Читателей", hero_s_rating: "Средняя оценка",
+    sec_cats: "Категории", sec_cats_p: "Выберите подходящее направление",
+    sec_books: "Популярные книги", sec_books_p: "Самые читаемые книги",
+    sec_new: "Новинки", sec_new_p: "Новые книги за неделю",
+    sec_feat: "Возможности",
+    sec_faq: "Частые вопросы", sec_faq_p: "Самые популярные вопросы о сайте",
+    all: "Все",
+    filter_genre: "Все жанры", filter_year: "Все годы", filter_author_ph: "Автор...", filter_reset: "Сбросить",
+    feat_inf_t: "Безлимитное чтение", feat_inf_p: "Читайте сколько угодно без оплаты",
+    feat_dev_t: "На любом устройстве", feat_dev_p: "Работает на телефоне, планшете и ПК",
+    feat_auto_t: "Автозакладка", feat_auto_p: "Книга запоминает место остановки",
+    feat_aud_t: "Аудиокниги", feat_aud_p: "Слушайте и занимайтесь творчеством",
+    f_nothing: "Ничего не найдено... Измените фильтр.",
+    f_empty: "Пока нет книг.", f_empty_hint: "Добавьте книгу через админ-панель.",
+    f_new_empty: "Пока нет новых книг. Добавьте книгу через админ-панель.",
+    kitob: "книг", soum: "сум", pages_unit: "стр.", audio_unit: "Аудиокнига", video_unit: "Видеоурок",
+    free_badge: "Бесплатно", paid_badge: "Платно", new_badge: "Новый", to_read: "Читать",
+    continue_pct: "Продолжить: {0}%", read_pct: "Прочитано {0}%",
+    m_views: "{0} просмотр(ов)",
+    m_rate_your: "Оцените книгу", m_rate_avg: "{0} / 5 ({1} оценок)", m_rate_avg_none: "Оценок пока нет — станьте первым",
+    m_comments: "Комментарии ({0})", cmt_name_ph: "Ваше имя", cmt_text_ph: "Напишите комментарий...", cmt_submit: "Отправить",
+    cmt_none: "Комментариев пока нет. Напишите первый!", err_cmt_text: "Напишите комментарий", toast_cmt_added: "Комментарий добавлен",
+    dl_btn_free: "Скачать бесплатно", dl_btn_buy: "Купить и скачать", dl_btn_reg: "Регистрация и скачивание",
+    rd_btn_audio: "Слушать", rd_btn_read: "Читать онлайн", rd_btn_video: "Смотреть",
+    m_price: "Цена", m_format: "Формат", m_genre: "Жанр", m_lang: "Язык", m_lang_val: "Узбекский",
+    m_dl_hint_logged: "Можно читать онлайн, слушать или скачивать",
+    m_dl_hint_anon: "Для чтения/прослушивания необходимо зарегистрироваться",
+    au_sub: "Аудиокнига", au_download: "Скачать аудиофайл",
+    au_hint: "Слушайте аудиокнигу в любое время. Для лучшего звука рекомендуется наушники.",
+    vd_download: "Скачать видеофайл",
+    vd_hint: "Для просмотра видео на весь экран используйте кнопку разворачивания в плеере.",
+    rd_title: "Чтение книги", rd_sub: "Зарегистрируйтесь и продолжайте чтение", rd_loading: "Загрузка страниц...",
+    rd_err: "Ошибка чтения PDF: {0}",
+    p_title: "Профиль", p_reads: "Прочитанные книги", p_noreads: "Пока не прочитано ни одной книги",
+    p_pct_read: "Прочитано {0}% · {1} / {2} стр.", p_continue: "Продолжить", p_logout: "Выйти",
+    ua_reg: "Регистрация", ua_login: "Вход",
+    ua_toggle_reg: "Уже есть аккаунт? Войти", ua_toggle_login: "Нет аккаунта? Регистрация",
+    ua_name_ph: "Имя", ua_email_ph: "Эл. почта", ua_pass_ph: "Пароль",
+    err_email: "Введите корректный email", err_pass_short: "Пароль должен быть не короче 4 символов",
+    err_name: "Введите имя", err_email_used: "Этот email уже зарегистрирован",
+    err_auth_bad: "Неверный email или пароль",
+    toast_welcome: "Добро пожаловать, {0}!", toast_logged_in: "Вы вошли в систему", toast_logged_out: "Вы вышли из системы",
+    dl_audio_ok: "Аудиокнига скачана", dl_book_ok: "Книга скачана", dl_err: "Ошибка скачивания: {0}",
+    adm_panel: "Админ-панель", adm_fab: "Панель", adm_stats: "Статистика", adm_books: "Книги", adm_cats: "Категории", adm_add: "Добавить",
+    adm_login_title: "Вход в админ-панель", adm_login_p: "Введите логин и пароль",
+    adm_note: "Внимание: этот раздел только для администраторов!", adm_login_ph: "Логин", adm_pass_ph: "Пароль", adm_btn_login: "Войти",
+    adm_new_cat: "Новая категория", adm_cat_name_ph: "Название категории", adm_cat_color: "Выбор цвета",
+    adm_cat_add: "Добавить категорию", adm_cat_list: "Существующие категории ({0})",
+    adm_std: "Стандарт", adm_del_title: "Удалить",
+    adm_new_book: "Добавить книгу", adm_title_ph: "Название книги", adm_author_ph: "Автор (кто написал)",
+    adm_year_ph: "Год издания (напр. 2024)", adm_volume_ph: "Том (напр. 1-й)", adm_about_ph: "О книге (about)",
+    adm_price_ph: "Цена (0 = бесплатно)", adm_free: "Бесплатно", adm_cover_label: "Обложка книги (изображение)",
+    adm_img_url_ph: "Введите URL изображения (ссылка)", adm_or: "или", adm_img_pick: "Выберите изображение из галереи",
+    adm_pdf_pick: "Выберите PDF-файл", adm_audio_pick: "Выберите аудио (MP3)", adm_video_pick: "Выберите видео (MP4)",
+    adm_add_hint: "Примечание: книга или аудио — выберите минимум одно. Аудио предназначено для прослушивания.",
+    adm_upload_btn: "Загрузить книгу", adm_total: "Всего: {0} книг", adm_demo: "Демо",
+    adm_s_total: "Всего книг", adm_s_dl: "Скачиваний", adm_s_users: "Пользователей", adm_s_free: "Бесплатных книг",
+    adm_s_views: "Просмотрено книг", adm_s_genre: "Книги по жанрам", adm_s_userlist: "Список пользователей",
+    adm_no_users: "Пока нет пользователей",
+    toast_admin_welcome: "Добро пожаловать в админ-панель",
+    adm_block_hint: "Введено 3 неверных попытки, панель заблокирована на {0} ч. Правильный пароль снимет блокировку",
+    adm_block24_msg: "3 ошибки! Панель заблокирована на {0} часа. Правильный пароль снимет блокировку",
+    adm_block24_toast: "Панель заблокирована на 24 часа!",
+    toast_pass_blocked: "Неверный пароль! Панель заблокирована",
+    hint_bad_login: "Неверный логин или пароль! Осталось попыток: {0}",
+    toast_bad_login: "Неверный логин или пароль! Осталось попыток: {0}",
+    toast_admin_out: "Вы вышли из админ-панели",
+    toast_cat_name: "Введите название категории", toast_cat_exists: "Такая категория уже существует",
+    toast_cat_added: "Категория добавлена: {0}", toast_cat_std: "Это стандартная категория, её нельзя удалить",
+    confirm_del_cat: "Удалить категорию '{0}'?", toast_cat_del: "Категория удалена",
+    toast_add_busy: "Книга загружается, подождите...", toast_book_title: "Введите название книги",
+    toast_book_author: "Введите автора", toast_book_file: "Выберите PDF или аудиофайл",
+    toast_book_cover: "Введите или выберите обложку",
+    confirm_dup: "Эта книга уже есть: \"{0}\". Всё равно добавить?",
+    toast_dup_no: "Не добавлено — такая книга уже существует",
+    toast_uploading: "Загрузка на CDN...", toast_upload_err: "Ошибка загрузки: {0}",
+    toast_book_added: "Книга успешно добавлена!", confirm_del_book: "Удалить книгу '{0}'?",
+    toast_book_del: "Книга удалена", toast_demo: "Это демо-книга, её нельзя удалить",
+    toast_audio_nf: "Аудиофайл не найден",
+    warn_title: "Запрещено", warn_body: "Просмотр исходного кода и технические действия закрыты. Сайт защищён.",
+    warn_close: "Закрыть", warn_hint: "Сайт продолжает работать: читайте, слушайте, скачивайте через CDN.",
+    f_tag: "Крупнейшая онлайн-библиотека на узбекском. Знание — величайшее богатство.",
+    f_site: "Сайт", f_home: "Главная", f_help: "Помощь", f_faq2: "FAQ", f_guide: "Руководство", f_rights: "Авторские права",
+    f_social: "Соцсети", f_bottom: "© 2026 VirtualKitob. Все права защищены.",
+    lang_label: "Язык",
+    faq1q: "Как читать книги?", faq1a: "Выберите книгу в разделе «Популярные» и нажмите «Читать онлайн». Сначала нужно зарегистрироваться.",
+    faq2q: "Нужно ли платить за скачивание?", faq2a: "Нет! Все книги бесплатны. Можно также скачать в формате PDF.",
+    faq3q: "Сохраняется ли история чтения?", faq3a: "Да. В профиле автоматически сохраняются прочитанные книги и последняя страница — продолжайте с места остановки.",
+    faq4q: "Работает ли сайт на телефоне?", faq4a: "Да. Сайт полностью адаптивен — одинаково хорошо выглядит на телефоне, планшете и ПК.",
+    faq5q: "Как добавить новую книгу?", faq5a: "Войдите в админ-панель через кнопку «Панель» в правом нижнем углу и загрузите обложку и PDF-файл книги.",
+    faq6q: "Есть ли тёмный режим?", faq6a: "Да. Выберите удобный режим кнопкой день/ночь наверху или смените язык сайта — выбор сохраняется.",
+    ai_title: "ИИ-ассистент",
+    ai_greet: "Здравствуйте! Я ИИ-ассистент VirtualKitob. Задайте любой вопрос о книгах — например «О чём эта книга?».",
+    ai_ph: "Напишите вопрос...",
+    ai_send: "Отправить",
+    ai_you: "Вы",
+    ai_ctx_none: "Книга не выбрана",
+    ai_ctx_book: "Текущая книга: {0}",
+    ai_clear: "Очистить",
+    ai_thinking: "Думаю...",
+    ai_reading: "Читаю текст книги...",
+    ai_read_fail: "Не удалось прочитать текст книги (возможно, это скан-PDF). Отвечу, опираясь на общие знания.",
+    ai_err: "Произошла ошибка. ИИ не смог ответить.",
+    ai_close_aria: "Закрыть панель ИИ-ассистента",
+    ai_toggle_aria: "Открыть или закрыть ИИ-ассистента",
+    ai_sug1: "О чём эта книга?",
+    ai_sug2: "Посоветуйте книгу",
+    ai_sug3: "Как скачать книгу?",
+    adm_ai_desc: "Создать описание с помощью ИИ",
+    adm_ai_desc_busy: "ИИ создаёт описание...",
+    adm_ai_desc_ok: "Описание создано!",
+    adm_ai_desc_err: "ИИ не смог создать описание.",
+    adm_ai_desc_offline: "Локальный ИИ (Ollama) выключен",
+    adm_ai_desc_pdf: "Сначала выберите PDF-файл",
+    adm_ai_desc_local: "Описание через ИИ работает только на локальном сервере"
+  },
+  en: {
+    title: "Virtual Library - Online Book World",
+    desc: "The largest online library in Uzbek. 10,000+ books, audiobooks and magazines. Read online for free and download PDF.",
+    skip: "Skip to main content",
+    nav_cats: "Categories", nav_books: "Books", nav_new: "New", nav_features: "Features", nav_faq: "FAQ",
+    search_ph: "Search books...", profile: "Profile",
+    theme_title: "Day/Night mode", theme_aria: "Toggle day and night",
+    hero_badge: "10,000+ online books",
+    hero_h1a: "Reading is the first step to ", hero_h1b: "discovery", hero_h1c: "",
+    hero_p: "Thousands of books, audiobooks and magazines — all in one place. Read anytime, on any device.",
+    hero_btn_start: "Start reading", hero_btn_cats: "Categories",
+    hero_s_books: "Books", hero_s_readers: "Readers", hero_s_rating: "Average rating",
+    sec_cats: "Categories", sec_cats_p: "Choose the direction that suits you",
+    sec_books: "Popular books", sec_books_p: "Most read books",
+    sec_new: "New arrivals", sec_new_p: "New books of the week",
+    sec_feat: "Features",
+    sec_faq: "Frequently asked questions", sec_faq_p: "Most common questions about the site",
+    all: "All",
+    filter_genre: "All genres", filter_year: "All years", filter_author_ph: "Author...", filter_reset: "Reset",
+    feat_inf_t: "Unlimited reading", feat_inf_p: "Read as much as you want for free",
+    feat_dev_t: "On any device", feat_dev_p: "Works on phone, tablet and computer",
+    feat_auto_t: "Auto bookmark", feat_auto_p: "The book remembers where you stopped",
+    feat_aud_t: "Audiobooks", feat_aud_p: "Listen and work creatively",
+    f_nothing: "Nothing found... Change the filter.",
+    f_empty: "No books yet.", f_empty_hint: "Add a book via the admin panel.",
+    f_new_empty: "No new books yet. Add a book via the admin panel.",
+    kitob: "books", soum: "soum", pages_unit: "pages", audio_unit: "Audiobook", video_unit: "Video lesson",
+    free_badge: "Free", paid_badge: "Paid", new_badge: "New", to_read: "Read",
+    continue_pct: "Continue: {0}%", read_pct: "{0}% read",
+    m_views: "{0} views",
+    m_rate_your: "Rate this book", m_rate_avg: "{0} / 5 ({1} ratings)", m_rate_avg_none: "No ratings yet — be the first",
+    m_comments: "Comments ({0})", cmt_name_ph: "Your name", cmt_text_ph: "Write a comment...", cmt_submit: "Post comment",
+    cmt_none: "No comments yet. Write the first one!", err_cmt_text: "Write a comment", toast_cmt_added: "Comment added",
+    dl_btn_free: "Download free", dl_btn_buy: "Buy and download", dl_btn_reg: "Register and download",
+    rd_btn_audio: "Listen", rd_btn_read: "Read online", rd_btn_video: "Watch",
+    m_price: "Price", m_format: "Format", m_genre: "Genre", m_lang: "Language", m_lang_val: "Uzbek",
+    m_dl_hint_logged: "You can read online, listen or download",
+    m_dl_hint_anon: "Register to read or listen",
+    au_sub: "Audiobook", au_download: "Download audio file",
+    au_hint: "Listen to the audiobook anytime. Headphones are recommended for the best sound.",
+    vd_download: "Download video file",
+    vd_hint: "Use the expand button in the player to watch the video fullscreen.",
+    rd_title: "Reading", rd_sub: "Register and continue reading", rd_loading: "Loading pages...",
+    rd_err: "PDF reading error: {0}",
+    p_title: "Profile", p_reads: "Read books", p_noreads: "No books read yet",
+    p_pct_read: "{0}% read · {1} / {2} pages", p_continue: "Continue", p_logout: "Log out",
+    ua_reg: "Sign up", ua_login: "Sign in",
+    ua_toggle_reg: "Have an account? Sign in", ua_toggle_login: "No account? Sign up",
+    ua_name_ph: "Your name", ua_email_ph: "Email", ua_pass_ph: "Your password",
+    err_email: "Enter a valid email", err_pass_short: "Password must be at least 4 characters",
+    err_name: "Enter your name", err_email_used: "This email is already registered",
+    err_auth_bad: "Incorrect email or password",
+    toast_welcome: "Welcome, {0}!", toast_logged_in: "You are logged in", toast_logged_out: "You are logged out",
+    dl_audio_ok: "Audiobook downloaded", dl_book_ok: "Book downloaded", dl_err: "Download error: {0}",
+    adm_panel: "Admin panel", adm_fab: "Panel", adm_stats: "Statistics", adm_books: "Books", adm_cats: "Categories", adm_add: "Add",
+    adm_login_title: "Admin panel login", adm_login_p: "Enter login and password",
+    adm_note: "Note: this section is for admins only!", adm_login_ph: "Login", adm_pass_ph: "Password", adm_btn_login: "Sign in",
+    adm_new_cat: "Add new category", adm_cat_name_ph: "Category name", adm_cat_color: "Pick color",
+    adm_cat_add: "Add category", adm_cat_list: "Existing categories ({0})",
+    adm_std: "Standard", adm_del_title: "Delete",
+    adm_new_book: "Add new book", adm_title_ph: "Book title", adm_author_ph: "Author (who wrote it)",
+    adm_year_ph: "Year (e.g. 2024)", adm_volume_ph: "Volume (e.g. 1st)", adm_about_ph: "About the book",
+    adm_price_ph: "Price (0 = free)", adm_free: "Free", adm_cover_label: "Book cover (image)",
+    adm_img_url_ph: "Enter image URL (link)", adm_or: "or", adm_img_pick: "Choose image from gallery",
+    adm_pdf_pick: "Choose PDF file", adm_audio_pick: "Choose audio file (MP3)", adm_video_pick: "Choose video file (MP4)",
+    adm_add_hint: "Note: book, audio or video — choose at least one. Audio and video are for listening and watching.",
+    adm_upload_btn: "Upload book", adm_total: "Total: {0} books", adm_demo: "Demo",
+    adm_s_total: "Total books", adm_s_dl: "Downloads", adm_s_users: "Users", adm_s_free: "Free books",
+    adm_s_views: "Books viewed", adm_s_genre: "Books by genre", adm_s_userlist: "User list",
+    adm_no_users: "No users yet",
+    toast_admin_welcome: "Welcome to the admin panel",
+    adm_block_hint: "3 wrong attempts, panel blocked for {0} h. Correct password unlocks it",
+    adm_block24_msg: "3 wrong attempts! Panel blocked for {0} hours. Correct password unlocks it",
+    adm_block24_toast: "Panel blocked for 24 hours!",
+    toast_pass_blocked: "Wrong password! Panel is blocked",
+    hint_bad_login: "Wrong login or password! Remaining attempts: {0}",
+    toast_bad_login: "Wrong login or password! Remaining attempts: {0}",
+    toast_admin_out: "You logged out of the admin panel",
+    toast_cat_name: "Enter category name", toast_cat_exists: "This category already exists",
+    toast_cat_added: "Category added: {0}", toast_cat_std: "This is a standard category, cannot be deleted",
+    confirm_del_cat: "Delete category '{0}'?", toast_cat_del: "Category deleted",
+    toast_add_busy: "Uploading, please wait...", toast_book_title: "Enter book title",
+    toast_book_author: "Enter the author", toast_book_file: "Choose a PDF or audio file",
+    toast_book_cover: "Enter or choose a cover image",
+    confirm_dup: "This book already exists: \"{0}\". Add anyway?",
+    toast_dup_no: "Not added — this book already exists",
+    toast_uploading: "Uploading to CDN...", toast_upload_err: "Upload error: {0}",
+    toast_book_added: "Book added successfully!", confirm_del_book: "Delete book '{0}'?",
+    toast_book_del: "Book deleted", toast_demo: "This is a demo book, cannot be deleted",
+    toast_audio_nf: "Audio file not found",
+    warn_title: "Blocked", warn_body: "Viewing source code and technical actions are disabled. The site is protected.",
+    warn_close: "Close", warn_hint: "The site keeps working: read, listen, download via CDN.",
+    f_tag: "The largest online library in Uzbek. Knowledge is the greatest wealth.",
+    f_site: "Site", f_home: "Home", f_help: "Help", f_faq2: "FAQ", f_guide: "Guide", f_rights: "Copyright",
+    f_social: "Social media", f_bottom: "© 2026 VirtualKitob. All rights reserved.",
+    lang_label: "Language",
+    faq1q: "How do I read books?", faq1a: "Pick any book from the Popular section and press 'Read online'. You must register first.",
+    faq2q: "Do I need to pay to download?", faq2a: "No! All books are free. You can also download them in PDF format.",
+    faq3q: "Is reading history saved?", faq3a: "Yes. Your profile automatically saves read books and the last page — continue from where you left off.",
+    faq4q: "Does the site work on mobile?", faq4a: "Yes. The site is fully responsive — it looks great on phone, tablet and computer.",
+    faq5q: "How do I add a new book?", faq5a: "Open the admin panel via the 'Panel' button in the bottom-right corner and upload the cover and PDF of the book.",
+    faq6q: "Is there a dark mode?", faq6a: "Yes. Choose a convenient mode with the day/night button at the top, or change the site language — your choice is saved.",
+    ai_title: "AI Assistant",
+    ai_greet: "Hello! I'm the VirtualKitob AI assistant. Ask me anything about books — for example \"What is this book about?\".",
+    ai_ph: "Type your question...",
+    ai_send: "Send",
+    ai_you: "You",
+    ai_ctx_none: "No book selected",
+    ai_ctx_book: "Current book: {0}",
+    ai_clear: "Clear",
+    ai_thinking: "Thinking...",
+    ai_reading: "Reading the book text...",
+    ai_read_fail: "Could not read the book text (it may be a scanned PDF). I will answer based on general knowledge.",
+    ai_err: "Something went wrong. The AI could not answer.",
+    ai_close_aria: "Close AI assistant panel",
+    ai_toggle_aria: "Open or close AI assistant",
+    ai_sug1: "What is this book about?",
+    ai_sug2: "Recommend a book",
+    ai_sug3: "How do I download a book?",
+    adm_ai_desc: "Generate description with AI",
+    adm_ai_desc_busy: "AI is generating the description...",
+    adm_ai_desc_ok: "Description generated!",
+    adm_ai_desc_err: "AI could not generate a description.",
+    adm_ai_desc_offline: "Local AI (Ollama) is offline",
+    adm_ai_desc_pdf: "Select a PDF file first",
+    adm_ai_desc_local: "AI description works only on the local server"
+  }
+};
+let curLang = 'uz';
+function t(key) {
+  const v = (LANGS[curLang] && LANGS[curLang][key] != null) ? LANGS[curLang][key] : (LANGS.uz[key] != null ? LANGS.uz[key] : key);
+  return v;
+}
+function tf(key) {
+  const v = t(key);
+  const args = [].slice.call(arguments, 1);
+  return v.replace(/\{(\d+)\}/g, (m, i) => (args[+i] != null ? args[+i] : m));
+}
+function renderFAQ() {
+  const wrap = document.getElementById('faqList');
+  if (!wrap) return;
+  let html = '';
+  for (let i = 1; i <= 6; i++) {
+    html += '<div class="faq-item"><details><summary>' + t('faq' + i + 'q') + '</summary><div class="faq-ans">' + t('faq' + i + 'a') + '</div></details></div>';
+  }
+  wrap.innerHTML = html;
+}
+function applyLang(lang) {
+  if (!LANGS[lang]) lang = 'uz';
+  curLang = lang;
+  try { localStorage.setItem('vs_lang', lang); } catch (e) {}
+  document.documentElement.setAttribute('lang', lang);
+  const sel = document.getElementById('langSel');
+  if (sel) sel.value = lang;
+  document.title = t('title');
+  const metas = { description: t('desc'), 'og:title': t('title'), 'og:description': t('desc'), 'twitter:title': t('title'), 'twitter:description': t('desc') };
+  ['name', 'property'].forEach(attr => {
+    for (const n in metas) {
+      const m = document.head.querySelector('meta[' + attr + '=\"' + n + '\"]');
+      if (m) m.setAttribute('content', metas[n]);
+    }
+  });
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.getAttribute('data-i18n')); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.setAttribute('placeholder', t(el.getAttribute('data-i18n-ph'))); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))); });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => { el.setAttribute('title', t(el.getAttribute('data-i18n-title'))); });
+  renderFAQ();
+  renderCategories();
+  renderBooks();
+  if (document.getElementById('adminPanel').classList.contains('show')) { renderStats(); renderAdminList(); renderCatAdminList(); }
+  if (document.getElementById('profileModal').classList.contains('show')) { const u = currentUser(); if (u) renderProfile(u); }
+  if (document.getElementById('modal').classList.contains('show') && pendingBook) {
+    const k = allBooks().indexOf(pendingBook);
+    if (k >= 0) openModal(k);
+  }
+  applyIcons();
+}
+
+// ---- Kitoblar bazasi (IndexedDB) ----
+let dbBooks = [];
+let db = null;
+
+// Render categories
+function getCategories() {
+  let custom = [];
+  try { custom = JSON.parse(localStorage.getItem('vs_cats') || '[]'); } catch (e) { custom = []; }
+  return categories.concat(custom);
+}
+function renderCategories() {
+  const all = allBooks();
+  const allcat = getCategories();
+  document.getElementById('cats').innerHTML = allcat.map((c, i) => {
+    const real = all.filter(b => (b.genre || '') === c.name).length;
+    const cnt = real > 0 ? real : (c.count || 0);
+    return `
+    <div class="cat-card">
+      <div class="cat-icon" style="background:${c.color}"><i class="bi ${esc(c.icon)}"></i></div>
+      <b>${esc(c.name)}</b>
+      <span>${cnt} ${t('kitob')}</span>
+    </div>`;
+  }).join('');
+  applyIcons();
+}
+renderCategories();
+
+const blobUrlCache = {};
+function coverSrc(b) {
+  if (!b) return null;
+  if (b.coverUrl) return b.coverUrl;
+  if (b.imageUrl) return b.imageUrl;
+  if (b.imageFile) {
+    const key = b.id || (b.title + (b.added || 0));
+    if (!blobUrlCache[key]) blobUrlCache[key] = URL.createObjectURL(b.imageFile);
+    return blobUrlCache[key];
+  }
+  return null;
+}
+
+// Book card helper
+function bookCard(b, i) {
+  const g = gradients[i % gradients.length];
+  const cs = coverSrc(b);
+  const coverStyle = cs ? `background:url('${cs}') center/cover no-repeat` : `background:${g}`;
+  const iconName = esc(b.icon || 'bi-book');
+  const coverIcon = cs ? '' : `<i class="bi ${iconName} bc-ico"></i>`;
+  const st = bookStat(bookKey(b));
+  const rate = st.rate;
+  const prog = readPctFor(b);
+  const isAudioBook = !!(b.audioUrl || b.audioFile);
+  const sizeStr = isAudioBook ? t('audio_unit') : (b.pages ? b.pages + ' ' + t('pages_unit') : '');
+  return `
+  <div class="book-card" onclick="openModal(${i})"> 
+    <div class="book-cover" style="${coverStyle}" role="img" aria-label="${esc(b.title)} muqovasi">
+      <div class="bc-top">
+        <span class="badge badge-acc">${b.free ? t('free_badge') : t('paid_badge')}</span>
+        <span class="badge badge-new">${esc(b.genre)}</span>
+      </div>
+      ${coverIcon}
+    </div>
+    <div class="book-body">
+      <h4>${esc(b.title)}</h4>
+      <span class="meta"><i class="bi bi-person"></i> ${esc(b.author)}</span>
+      <span class="meta">${rate ? '<i class="bi bi-star-fill" style="color:#f59e0b"></i> ' + rate.avg.toFixed(1) + ' <span style="opacity:.55">(' + rate.n + ')</span>' : '<i class="bi bi-star" style="color:#cbd5e1"></i> ' + t('new_badge')}${sizeStr ? ' &middot; ' + sizeStr : ''}</span>
+      <span class="meta"><i class="bi bi-eye"></i> ${st.views || 0}</span>
+      ${prog ? '<span class="prog-badge"><i class="bi bi-bookmark-fill"></i> ' + tf('continue_pct', prog) + '</span>' : ''}
+      <div class="book-foot">
+        <span class="price">${b.free !== false ? '0 ' + t('soum') : (b.price || 0).toLocaleString() + ' ' + t('soum')}</span>
+        <button class="btn-small" onclick="event.stopPropagation()"><i class="bi bi-bookmark-plus"></i> ${t('to_read')}</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+// Render books (boshlang'ich grid renderBooks() orqali to'ldiriladi)
+
+function closeModal() { document.getElementById('modal').classList.remove('show'); }
+document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+// Search & filter
+document.getElementById('searchInput').addEventListener('input', renderBooks);
+document.getElementById('filterGenre').addEventListener('change', renderBooks);
+document.getElementById('filterYear').addEventListener('change', renderBooks);
+document.getElementById('filterAuthor').addEventListener('input', renderBooks);
+loadEngage();
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('rast'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.book-card, .cat-card, .feature').forEach(el => observer.observe(el));
+// ---- Kitoblar bazasi (IndexedDB) ----
+const dbReq = indexedDB.open('vt_kitob', 1);
+dbReq.onupgradeneeded = e => {
+  db = e.target.result;
+  if (!db.objectStoreNames.contains('books')) db.createObjectStore('books', { keyPath: 'id', autoIncrement: true });
+};
+dbReq.onsuccess = e => { db = e.target.result; loadDbBooks(); };
+dbReq.onerror = () => renderBooks();
+
+function dbTx(mode, fn) {
+  if (!db) return;
+  return fn(db.transaction('books', mode).objectStore('books'));
+}
+function loadDbBooks() {
+  const req = dbTx('readonly', st => st.getAll());
+  if (!req) return renderBooks();
+  req.onsuccess = e => { dbBooks = e.target.result || []; renderBooks(); };
+}
+function addBookToDb(rec) {
+  return new Promise((res, rej) => {
+    const req = dbTx('readwrite', st => st.add(rec));
+    req.onsuccess = () => res(req.result);
+    req.onerror = () => rej(req.error);
+  });
+}
+function removeBookFromDb(id) {
+  return new Promise((res, rej) => {
+    const req = dbTx('readwrite', st => st.delete(id));
+    req.onsuccess = () => res();
+    req.onerror = () => rej(req.error);
+  });
+}
+
+function allBooks() { return dbBooks.slice().concat(books); }
+
+function applyIcons() {
+  function rgbKey(c) {
+    const m = c.match(/rgba?\(\s*(\d+),\s*(\d+),\s*(\d+)/);
+    return m ? m[1] + ',' + m[2] + ',' + m[3] : '';
+  }
+  const colorMap = {
+    '245,158,11': '-amber', '79,70,229': '-primary', '129,140,248': '-primary',
+    '220,38,38': '-red', '239,68,68': '-red',
+    '52,211,153': '-green', '4,120,87': '-green',
+    '100,116,139': '-muted', '148,163,184': '-social', '146,64,14': '-brown'
+  };
+  const dark = document.body.classList.contains('dark');
+  document.querySelectorAll('.bi').forEach(el => {
+    const bi = Array.from(el.classList).find(c => c.startsWith('bi-'));
+    if (!bi) return;
+    const name = bi.slice(3);
+    const key = rgbKey(getComputedStyle(el).color);
+    const lightOnDark = dark && key && !colorMap[key] && key.split(',').reduce((a, b) => a + +b, 0) / 3 > 150;
+    let src;
+    if (key === '255,255,255' || lightOnDark) src = 'icon/white/' + name + '.png';
+    else if (colorMap[key]) src = 'icon/' + name + colorMap[key] + '.png';
+    else src = 'icon/' + name + '.png';
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    img.className = 'bi-img';
+    img.loading = 'lazy';
+    img.onerror = function () { this.onerror = null; this.style.visibility = 'hidden'; };
+    const fs = getComputedStyle(el).fontSize;
+    img.style.width = fs;
+    img.style.height = fs;
+    el.replaceWith(img);
+  });
+}
+function incStat(key) {
+  const v = +(localStorage.getItem(key) || 0) + 1;
+  localStorage.setItem(key, v);
+  return v;
+}
+
+// ---- Ko'rishlar, reyting va izohlar (Bunny JSON orqali) ----
+let engage = { views: {}, ratings: {}, comments: {} };
+const viewedSession = {};
+async function loadEngage() {
+  try {
+    const r = await fetch('/engage');
+    if (r.ok) { const j = await r.json(); if (j && j.views) engage = j; }
+  } catch (e) {}
+}
+async function engagePost(body) {
+  try {
+    const r = await fetch('/engage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    if (r.ok) { const j = await r.json(); if (j && j.views) engage = j; }
+  } catch (e) {}
+}
+function bookStat(k) {
+  const v = engage.views[k] || 0;
+  const r = engage.ratings[k];
+  const c = engage.comments[k] || [];
+  return { views: v, rate: (r && r.n) ? { avg: r.sum / r.n, n: r.n } : null, comments: c.length };
+}
+function fmtDate(d) { try { return new Date(d).toLocaleDateString('ru-RU').split('/').reverse().join('-'); } catch (e) { return ''; } }
+function readPctFor(b) {
+  const u = currentUser();
+  if (!u) return 0;
+  try {
+    const r = getReads(u.email)[bookKey(b)];
+    if (!r || !r.page) return 0;
+    return Math.max(1, Math.min(100, Math.round((r.page / Math.max(1, r.total)) * 100)));
+  } catch (e) { return 0; }
+}
+function myRateFor(k) { try { return JSON.parse(localStorage.getItem('vs_my_rates') || '{}')[k] || 0; } catch (e) { return 0; } }
+function setMyRateFor(k, stars) { try { const m = JSON.parse(localStorage.getItem('vs_my_rates') || '{}'); m[k] = stars; localStorage.setItem('vs_my_rates', JSON.stringify(m)); } catch (e) {} }
+function renderStars(k) {
+  const mine = myRateFor(k);
+  let out = '';
+  for (let s = 1; s <= 5; s++) out += '<i class="bi bi-star-fill' + (mine >= s ? ' on' : '') + '" data-s="' + s + '" title="' + s + ' yulduz"></i>';
+  return out;
+}
+async function rateBook(k, stars) {
+  const mine = myRateFor(k);
+  if (mine === stars) return;
+  setMyRateFor(k, stars);
+  document.querySelectorAll('#rateStars i').forEach(el => { el.classList.toggle('on', +el.dataset.s <= stars); });
+  await engagePost({ action: 'rate', key: k, stars: stars });
+  const s = bookStat(k);
+  const el = document.getElementById('rateAvg');
+  if (el) el.textContent = s.rate ? tf('m_rate_avg', s.rate.avg.toFixed(1), s.rate.n) : t('m_rate_avg_none');
+  renderBooks();
+}
+function rateStarsClick(ev, k) {
+  const i = ev.target.closest('i');
+  if (i) rateBook(k, +i.dataset.s);
+}
+async function addComment(k) {
+  const nm = (document.getElementById('cmtName').value || '').trim();
+  const tx = (document.getElementById('cmtText').value || '').trim();
+  if (nm.length < 2) return toast(t('err_name'));
+  if (tx.length < 2) return toast(t('err_cmt_text'));
+  await engagePost({ action: 'comment', key: k, name: nm, text: tx });
+  document.getElementById('cmtText').value = '';
+  toast(t('toast_cmt_added'));
+  renderComments(k);
+}
+function renderComments(k) {
+  const list = (engage.comments[k] || []).slice(-15).reverse();
+  const el = document.getElementById('cmtList');
+  if (!el) return;
+  el.innerHTML = list.length
+    ? list.map(c => '<div class="cmt-item"><div class="cmt-n"><i class="bi bi-person-circle"></i> ' + esc(c.n) + '</div><div class="cmt-t">' + esc(c.t) + '</div><div class="cmt-d">' + fmtDate(c.d) + '</div></div>').join('')
+    : '<p class="hint">' + t('cmt_none') + '</p>';
+}
+function resetFilters() {
+  document.getElementById('filterGenre').value = '';
+  document.getElementById('filterYear').value = '';
+  document.getElementById('filterAuthor').value = '';
+  document.getElementById('searchInput').value = '';
+  renderBooks();
+}
+function renderFilters() {
+  const all = allBooks();
+  const genres = ['', ...new Set(all.map(b => b.genre || 'Badiiy'))];
+  const years = ['', ...new Set(all.map(b => (b.year ? String(b.year) : '')).filter(y => y))].sort((a, b) => (+b || 0) - (+a || 0));
+  const fg = document.getElementById('filterGenre');
+  const fy = document.getElementById('filterYear');
+  const curG = fg.value;
+  const curY = fy.value;
+  if (fg) {
+    fg.innerHTML = genres.map(g => '<option value="' + esc(g) + '">' + (g === '' ? t('filter_genre') : esc(g)) + '</option>').join('');
+    fg.value = genres.includes(curG) ? curG : '';
+  }
+  if (fy) {
+    fy.innerHTML = ['', ...years].map(y => '<option value="' + esc(y) + '">' + (y === '' ? t('filter_year') : esc(y)) + '</option>').join('');
+    fy.value = years.includes(curY) ? curY : '';
+  }
+}
+
+function renderBooks() {
+  const all = allBooks();
+  renderFilters();
+  const q = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+  const fgEl = document.getElementById('filterGenre');
+  const fyEl = document.getElementById('filterYear');
+  const faEl = document.getElementById('filterAuthor');
+  const fg = (fgEl && fgEl.value) || '';
+  const fy = (fyEl && fyEl.value) || '';
+  const fa = (faEl && faEl.value.trim().toLowerCase()) || '';
+  const mapAll = all.map((b, i) => ({ b, i }));
+  let filtered = mapAll;
+  if (q) filtered = filtered.filter(x => (x.b.title + ' ' + (x.b.author || '') + ' ' + (x.b.genre || '') + ' ' + (x.b.volume || '')).toLowerCase().includes(q));
+  if (fg) filtered = filtered.filter(x => (x.b.genre || 'Badiiy') === fg);
+  if (fy) filtered = filtered.filter(x => String(x.b.year || '') === fy);
+  if (fa) filtered = filtered.filter(x => (x.b.author || '').toLowerCase().includes(fa));
+  document.getElementById('books').innerHTML = filtered.length
+    ? filtered.map(x => bookCard(x.b, x.i)).join('')
+    : '<div class="empty-state"><p>' + (all.length ? t('f_nothing') : t('f_empty')) + '</p>' + (all.length ? '' : '<p class="hint">' + t('f_empty_hint') + '</p>') + '</div>';
+  const hasQuery = q || fg || fy || fa;
+  if (!hasQuery) {
+    const lastBooks = dbBooks.length ? dbBooks.slice(-2) : books.slice(-2);
+    const newOnes = lastBooks.map(b => all.indexOf(b)).filter(i => i >= 0);
+    document.getElementById('booksNew').innerHTML = newOnes.length
+      ? newOnes.map(i => bookCard(all[i], i)).join('')
+      : '<p style="color:var(--muted)">' + t('f_new_empty') + '</p>';
+  } else {
+    document.getElementById('booksNew').innerHTML = '';
+  }
+  document.querySelectorAll('.book-card').forEach(el => el.classList.remove('rast'));
+  document.querySelectorAll('.book-card').forEach(el => observer.observe(el));
+  renderHero(all);
+  applyIcons();
+}
+
+function renderHero(all) {
+  const b = all && all.length ? all[0] : null;
+  const book = document.getElementById('heroBook');
+  const cover = document.getElementById('heroCover');
+  const info = document.getElementById('heroInfo');
+  if (!b) {
+    book.style.display = 'none';
+    return;
+  }
+  book.style.display = 'flex';
+  const cs = coverSrc(b);
+  if (cs) {
+    cover.style.background = 'url(' + cs + ') center/cover';
+    cover.innerHTML = '';
+  } else {
+    cover.style.background = '';
+    cover.innerHTML = '<i class="bi bi-book" style="font-size:2rem"></i>';
+  }
+  info.innerHTML = `
+    <span class="tag tag-green"><i class="bi bi-check-circle-fill"></i> ${t('new_badge')}</span>
+    <h3 class="hero-book-title">"${b.title}"</h3>
+    <p class="author">${b.author || ''}</p>
+    <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span>${b.rating || '5.0'}</span></div>
+    <b>${b.free !== false ? '0 ' + t('soum') + ' — ' + t('free_badge') : (b.price || 0).toLocaleString() + ' ' + t('soum')}</b>`;
+}
+
+// ---- Kitob modali (yuklab olish bilan) ----
+let pendingBook = null;
+let pendingDownload = false;
+let pendingReadIdx = -1;
+
+function openModal(i) {
+  const all = allBooks();
+  const b = all[i];
+  if (!b) return;
+  pendingBook = b;
+  setAICtx(b);
+  incStat('vs_views');
+  const g = gradients[i % gradients.length];
+  const cs = coverSrc(b);
+  const k = bookKey(b);
+  const st = bookStat(k);
+  if (!viewedSession[k]) { viewedSession[k] = 1; engagePost({ action: 'view', key: k }); }
+  document.getElementById('mCover').innerHTML = cs
+    ? `<div class="m-badge">${esc(b.genre || 'Badiiy')}</div>`
+    : `<div style="text-align:center">
+      <i class="bi ${esc(b.icon || 'bi-book')}" style="font-size:5rem;color:#fff"></i>
+      <div class="m-badge">${esc(b.genre || 'Badiiy')}</div>
+    </div>`;
+  document.getElementById('mCover').style.background = cs
+    ? `url('${cs}') center/cover no-repeat`
+    : g;
+  const isAudio = !!(b.audioUrl || b.audioFile);
+  const dlBtn = currentUser()
+    ? `<button class="btn btn-primary block" onclick="downloadBook()"><i class="bi bi-download"></i> ${b.free !== false ? t('dl_btn_free') : t('dl_btn_buy')}</button>`
+    : `<button class="btn btn-primary block" onclick="requestDownload()"><i class="bi bi-box-arrow-in-right"></i> ${t('dl_btn_reg')}</button>`;
+  const rdBtn = isAudio
+    ? `<button class="btn btn-outline block" style="margin-top:10px" onclick="playAudio(${i})"><i class="bi bi-headphones"></i> ${t('rd_btn_audio')}</button>`
+    : `<button class="btn btn-outline block" style="margin-top:10px" onclick="openReader(${i})"><i class="bi bi-book-half"></i> ${t('rd_btn_read')}</button>`;
+  const sizeStr = isAudio ? t('audio_unit') : (b.pages ? b.pages + ' ' + t('pages_unit') : '');
+  document.getElementById('mBody').innerHTML = `
+    <h2>${esc(b.title)}</h2>
+    <p class="author"><i class="bi bi-person"></i> ${esc(b.author)}</p>
+    <div class="m-rating">
+      <span><i class="bi bi-star-fill" style="color:#f59e0b"></i> ${st.rate ? st.rate.avg.toFixed(1) + ' (' + st.rate.n + ')' : t('new_badge')}</span>
+      <span><i class="bi bi-eye"></i> ${tf('m_views', st.views || 0)}</span>
+      <span><i class="bi bi-calendar3"></i> ${esc(b.year || '2026')}</span>
+      <span><i class="bi ${isAudio ? 'bi-clock' : 'bi-file-earmark-text'}"></i> ${esc(sizeStr)}</span>
+      ${b.volume ? '<span><i class="bi bi-collection"></i> ' + esc(b.volume) + '</span>' : ''}
+    </div>
+    <p class="m-desc">${esc(b.desc || b.about || '')}</p>
+    <div class="m-info">
+      <div class="mi"><span>${t('m_price')}</span><b>${b.free !== false ? t('free_badge') : (b.price || 0).toLocaleString() + ' ' + t('soum')}</b></div>
+      <div class="mi"><span>${t('m_format')}</span><b>${isAudio ? 'MP3 (Audio)' : 'PDF' + (b.pdf ? ' (yuklangan)' : '')}</b></div>
+      <div class="mi"><span>${t('m_genre')}</span><b>${esc(b.genre || 'Badiiy')}</b></div>
+      <div class="mi"><span>${t('m_lang')}</span><b>${t('m_lang_val')}</b></div>
+    </div>
+    <div class="rate-row">
+      <div><b><i class="bi bi-star-fill" style="color:#f59e0b"></i> ${t('m_rate_your')}</b><br><span id="rateAvg" style="font-size:.8rem;color:var(--muted)">${st.rate ? tf('m_rate_avg', st.rate.avg.toFixed(1), st.rate.n) : t('m_rate_avg_none')}</span></div>
+      <span class="stars" id="rateStars" onclick="rateStarsClick(event, '${jsAttr(k)}')">${renderStars(k)}</span>
+    </div>
+    <div class="cmt-box">
+      <h4><i class="bi bi-chat-dots"></i> ${tf('m_comments', st.comments)}</h4>
+      <div class="cmt-list" id="cmtList"></div>
+      <div class="cmt-form">
+        <input class="field" id="cmtName" value="${esc(currentUser() ? currentUser().name : '')}" placeholder="${t('cmt_name_ph')}">
+        <textarea class="field" id="cmtText" rows="2" placeholder="${t('cmt_text_ph')}"></textarea>
+      </div>
+      <button class="btn btn-outline block" style="margin-top:8px" onclick="addComment('${jsAttr(k)}')"><i class="bi bi-send"></i> ${t('cmt_submit')}</button>
+    </div>
+    ${dlBtn}
+    ${rdBtn}
+    ${currentUser() ? '<p class="hint">' + t('m_dl_hint_logged') + '</p>' : '<p class="hint">' + t('m_dl_hint_anon') + '</p>'}`;
+  document.getElementById('modal').classList.add('show');
+  renderComments(k);
+  applyIcons();
+}
+
+// ---- Onlayn o'qish (Reader) ----
+if (window.pdfjsLib) pdfjsLib.GlobalWorkerOptions.workerSrc = 'vendor/pdf.worker.min.js';
+let pdfDoc = null;
+let pdfPage = 1;
+let pdfTotal = 0;
+let readerBook = null;
+let readerIdx = -1;
+
+async function fetchBookPdfBuffer(b) {
+  const src = proxyMedia(b.pdfUrl);
+  if (src) {
+    const r = await fetch(src);
+    if (!r.ok) throw new Error('PDF yuklanmadi (' + r.status + ')');
+    return await r.arrayBuffer();
+  }
+  if (b.pdf) return await b.pdf.arrayBuffer();
+  return null;
+}
+
+function proxyMedia(u) {
+  const cdn = 'https://yuristakademiya.b-cdn.net/';
+  if (u && u.indexOf(cdn) === 0) return '/cdn/' + u.slice(cdn.length);
+  return u || '';
+}
+
+function openReader(i) {
+  const all = allBooks();
+  const b = all[i];
+  if (!b) return;
+  if (b.audioUrl || b.audioFile) return playAudio(i);
+  if (!currentUser()) {
+    pendingBook = b;
+    pendingReadIdx = i;
+    readerIdx = -1;
+    showUserAuth('login');
+    return;
+  }
+  readerIdx = i;
+  readerBook = b;
+  if (window.pdfjsLib && !pdfjsLib.GlobalWorkerOptions.workerSrc) pdfjsLib.GlobalWorkerOptions.workerSrc = 'vendor/pdf.worker.min.js';
+  const body = document.getElementById('readerBody');
+  body.querySelectorAll('.reader-loading')[0].style.display = 'flex';
+  document.getElementById('readerCanvas').style.display = 'none';
+  document.getElementById('readerTitle').textContent = b.title;
+  document.getElementById('readerSub').textContent = b.author + (b.genre ? ' • ' + b.genre : '');
+  document.getElementById('readerModal').classList.add('show');
+  const myEmail = currentUser().email;
+  const reads = getReads(myEmail);
+  const key = bookKey(b);
+  const startPage = (reads[key] && reads[key].page) || 1;
+  let task = fetchBookPdfBuffer(b);
+  if (!b.pdfUrl && !b.pdf) task = generatePdf(b.title, b.author, b.desc || b.about || '').arrayBuffer().then(buf => buf);
+  task.then(buf => {
+    return pdfjsLib.getDocument({ data: buf }).promise;
+  }).then(doc => {
+    pdfDoc = doc;
+    pdfTotal = doc.numPages;
+    renderPdfPage(startPage);
+  }).catch(err => {
+    body.querySelectorAll('.reader-loading')[0].style.display = 'none';
+    toast(tf('rd_err', err.message));
+  });
+}
+function openReaderByIdx(i) { openReader(i); }
+
+function renderPdfPage(pg) {
+  if (!pdfDoc) return;
+  const body = document.getElementById('readerBody');
+  pg = Math.max(1, Math.min(pdfTotal, pg));
+  pdfPage = pg;
+  const canvas = document.getElementById('readerCanvas');
+  pdfDoc.getPage(pg).then(page => {
+    const viewport = page.getViewport({ scale: 1.4 });
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = viewport.width * dpr;
+    canvas.height = viewport.height * dpr;
+    canvas.style.width = viewport.width + 'px';
+    canvas.style.height = viewport.height + 'px';
+    canvas.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
+    return page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+  }).then(() => {
+    document.getElementById('readerCanvas').style.display = 'block';
+    body.querySelectorAll('.reader-loading')[0].style.display = 'none';
+    body.scrollTop = 0;
+    document.getElementById('rdPrev').disabled = pdfPage <= 1;
+    document.getElementById('rdNext').disabled = pdfPage >= pdfTotal;
+    const pct = Math.round((pdfPage / Math.max(1, pdfTotal)) * 100);
+    document.getElementById('rdInfo').textContent = pdfPage + ' / ' + pdfTotal;
+    document.getElementById('rdPct').textContent = pct + '%';
+    document.getElementById('rdFill').style.width = pct + '%';
+    saveProgress();
+  });
+}
+function rdPrev() { if (pdfPage > 1) renderPdfPage(pdfPage - 1); }
+function rdNext() { if (pdfPage < pdfTotal) renderPdfPage(pdfPage + 1); }
+function rdScrollSave() {
+  const el = document.getElementById('readerBody');
+  const max = el.scrollHeight - el.clientHeight;
+  const u = currentUser();
+  if (!u || !readerBook || !pdfDoc || max <= 0) return;
+  const reads = getReads(u.email);
+  const pos = Math.max(0, Math.min(1, el.scrollTop / max));
+  const frac = (pdfPage - 1 + pos) / Math.max(1, pdfTotal);
+  reads[bookKey(readerBook)] = { title: readerBook.title, page: pdfPage, pct: Math.round(frac * 100), total: pdfTotal || 1, updated: Date.now() };
+  saveReads(u.email, reads);
+}
+document.getElementById('readerBody').addEventListener('scroll', () => {
+  clearTimeout(rdScrollTimer);
+  rdScrollTimer = setTimeout(rdScrollSave, 400);
+});
+let rdScrollTimer = null;
+function saveProgress() {
+  const u = currentUser();
+  if (!u || !readerBook) return;
+  rdScrollSave();
+}
+function closeReader() {
+  saveProgress();
+  document.getElementById('readerModal').classList.remove('show');
+  if (pdfDoc) { try { pdfDoc.destroy(); } catch (e) {} }
+  pdfDoc = null;
+  readerIdx = -1;
+}
+document.addEventListener('keydown', e => {
+  if (document.getElementById('readerModal').classList.contains('show')) {
+    if (e.key === 'Escape') closeReader();
+    else if (e.key === 'ArrowRight') rdNext();
+    else if (e.key === 'ArrowLeft') rdPrev();
+  } else if (document.getElementById('audioModal').classList.contains('show') && e.key === 'Escape') {
+    closeAudio();
+  } else if (document.getElementById('warnModal') && document.getElementById('warnModal').classList.contains('show') && e.key === 'Escape') {
+    closeWarn();
+  }
+});
+
+// ---- Audio tinglash ----
+function playAudio(i) {
+  const all = allBooks();
+  const b = all[i];
+  if (!b) return;
+  if (!currentUser()) {
+    pendingBook = b;
+    pendingReadIdx = i;
+    showUserAuth('login');
+    return;
+  }
+  pendingBook = b;
+  const src = proxyMedia(b.audioUrl) || (b.audioFile ? URL.createObjectURL(b.audioFile) : null);
+  if (!src) return toast(t('toast_audio_nf'));
+  document.getElementById('auTitle').textContent = b.title;
+  document.getElementById('auSub').textContent = b.author + (b.genre ? ' • ' + b.genre : '');
+  const p = document.getElementById('auPlayer');
+  p.src = src;
+  document.getElementById('audioModal').classList.add('show');
+  p.play().catch(() => {});
+  applyIcons();
+}
+function closeAudio() {
+  document.getElementById('audioModal').classList.remove('show');
+  const p = document.getElementById('auPlayer');
+  p.pause();
+  p.removeAttribute('src');
+  p.load();
+}
+document.getElementById('audioModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeAudio(); });
+
+function requestDownload() { pendingDownload = true; showUserAuth('reg'); }
+
+// ---- Foydalanuvchi tizimi ----
+function getUsers() { try { return JSON.parse(localStorage.getItem('vs_users') || '[]'); } catch (e) { return []; } }
+function saveUsers(u) { localStorage.setItem('vs_users', JSON.stringify(u)); }
+function currentUser() { try { return JSON.parse(localStorage.getItem('vs_user') || 'null'); } catch (e) { return null; } }
+
+let uaMode = 'reg';
+function showUserAuth(mode) {
+  uaMode = mode || 'reg';
+  document.getElementById('uaNameWrap').style.display = uaMode === 'reg' ? 'block' : 'none';
+  document.getElementById('uaTitle').textContent = uaMode === 'reg' ? t('ua_reg') : t('ua_login');
+  document.getElementById('uaBtnText').innerHTML = uaMode === 'reg'
+    ? '<i class="bi bi-person-plus-fill"></i> ' + t('ua_reg')
+    : '<i class="bi bi-box-arrow-in-right"></i> ' + t('ua_login');
+  document.getElementById('uaToggleText').textContent = uaMode === 'reg' ? t('ua_toggle_reg') : t('ua_toggle_login');
+  document.getElementById('userAuthModal').classList.add('show');
+}
+function profilAction() {
+  const u = currentUser();
+  if (u) {
+    renderProfile(u);
+  } else {
+    showUserAuth('login');
+  }
+}
+function profileLogout() {
+  localStorage.removeItem('vs_user');
+  document.getElementById('profileModal').classList.remove('show');
+  toast(t('toast_logged_out'));
+  applyIcons();
+}
+function getReads(email) { try { return JSON.parse(localStorage.getItem('vs_reads_' + email) || '{}'); } catch (e) { return {}; } }
+function saveReads(email, reads) { localStorage.setItem('vs_reads_' + email, JSON.stringify(reads)); }
+function bookKey(b) { return b.id ? 'db' + b.id : (b.title + '|' + (b.author || '')); }
+function renderProfile(u) {
+  document.getElementById('pfName').textContent = u.name;
+  document.getElementById('pfEmail').textContent = u.email;
+  const reads = getReads(u.email);
+  const keys = Object.keys(reads);
+  const all = allBooks();
+  const list = document.getElementById('pfReads');
+  if (!keys.length) {
+    list.innerHTML = '<p class="hint">' + t('p_noreads') + '</p>';
+  } else {
+    list.innerHTML = keys.map(k => {
+      const r = reads[k];
+      const idx = all.findIndex(b => bookKey(b) === k);
+      if (idx < 0) return '';
+      const ui = r.pct || Math.round((r.page / Math.max(1, r.total)) * 100);
+      return `
+        <div class="read-row">
+          <span class="rd-ic"><i class="bi bi-book"></i></span>
+          <div class="rd-info">
+            <b>${esc(all[idx].title)}</b>
+            <div class="rd-pbar"><span style="width:${ui}%"></span></div>
+            <div class="rd-meta">${tf('p_pct_read', ui, r.page, r.total)}</div>
+          </div>
+          <button class="rd-btn" onclick="openReaderByIdx(${idx})"><i class="bi bi-play-fill"></i> ${t('p_continue')}</button>
+        </div>`;
+    }).join('') || '<p class="hint">' + t('p_noreads') + '</p>';
+  }
+  document.getElementById('profileModal').classList.add('show');
+  applyIcons();
+}
+function uaToggle(e) {
+  e.preventDefault();
+  uaMode = uaMode === 'reg' ? 'login' : 'reg';
+  showUserAuth(uaMode);
+}
+async function uaSubmit() {
+  const name = document.getElementById('uaName').value.trim();
+  const email = document.getElementById('uaEmail').value.trim();
+  const pass = document.getElementById('uaPass').value;
+  if (!/^\S+@\S+\.\S+$/.test(email)) return toast(t('err_email'));
+  if (pass.length < 4) return toast(t('err_pass_short'));
+  const users = getUsers();
+  if (uaMode === 'reg') {
+    if (name.length < 2) return toast(t('err_name'));
+    if (users.some(u => u.email === email)) return toast(t('err_email_used'));
+    const u = { id: Date.now(), name, email, hpass: await sha256(pass) };
+    users.push(u);
+    saveUsers(users);
+    localStorage.setItem('vs_user', JSON.stringify(u));
+    toast(tf('toast_welcome', name));
+  } else {
+    const u = users.find(x => x.email === email);
+    if (!u) return toast(t('err_auth_bad'));
+    const hash = await sha256(pass);
+    const ok = (u.hpass && u.hpass === hash) || (!u.hpass && u.pass && u.pass === pass);
+    if (!ok) return toast(t('err_auth_bad'));
+    if (!u.hpass) { u.hpass = hash; delete u.pass; saveUsers(users); }
+    localStorage.setItem('vs_user', JSON.stringify(u));
+    toast(t('toast_logged_in'));
+  }
+  document.getElementById('userAuthModal').classList.remove('show');
+  if (pendingReadIdx >= 0) { const ri = pendingReadIdx; pendingReadIdx = -1; openReader(ri); }
+  if (pendingDownload) { pendingDownload = false; downloadBook(); }
+}
+
+// ---- Yuklab olish ----
+function downloadBook() {
+  if (!pendingBook) return;
+  const b = pendingBook;
+  if (!currentUser()) { showUserAuth('login'); pendingDownload = true; return; }
+  incStat('vs_downloads');
+  let task;
+  const isAudio = !!(b.audioUrl || b.audioFile);
+  if (isAudio) {
+    task = b.audioUrl
+      ? fetch(proxyMedia(b.audioUrl)).then(r => { if (!r.ok) throw new Error('Audio yuklanmadi (' + r.status + ')'); return r.arrayBuffer(); })
+      : Promise.resolve(b.audioFile);
+  } else {
+    task = fetchBookPdfBuffer(b);
+    if (!b.pdfUrl && !b.pdf) task = Promise.resolve(generatePdf(b.title, b.author, b.desc || b.about || ''));
+  }
+  task.then(bufOrBlob => {
+    const blob = bufOrBlob instanceof ArrayBuffer ? new Blob([new Uint8Array(bufOrBlob)], { type: isAudio ? 'audio/mpeg' : 'application/pdf' }) : bufOrBlob;
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = b.title.replace(/[^\w\d\- ]+/g, '_') + (isAudio ? '.mp3' : '.pdf');
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    toast(isAudio ? t('dl_audio_ok') : t('dl_book_ok'));
+  }).catch(err => {
+    toast(tf('dl_err', err.message));
+  });
+}
+
+function l1len(s) { let n = 0; for (const ch of s) n++; return n; }
+function l1bytes(s) {
+  const a = new Uint8Array(l1len(s));
+  let k = 0;
+  for (const ch of s) { a[k++] = ch.codePointAt(0) > 255 ? 63 : ch.codePointAt(0); }
+  return a;
+}
+function generatePdf(title, author, about) {
+  const esc = s => (s || '').replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/[\r\n\t]/g, ' ');
+  const t = esc(title), a = esc(author), d = esc(about);
+  const stream = 'BT /F1 20 Tf 60 760 Td 34 TL (' + t + ') Tj T* (' + a + ') Tj T* 10 TL () Tj T* (' + d + ') Tj ET';
+  const objs = [
+    '<< /Type /Catalog /Pages 2 0 R >>',
+    '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+    '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>',
+    '<< /Length ' + l1len(stream) + ' >>\nstream\n' + stream + '\nendstream',
+    '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>'
+  ];
+  let file = '%PDF-1.4\n';
+  const offs = [];
+  for (let i = 0; i < objs.length; i++) { offs.push(l1len(file)); file += (i + 1) + ' 0 obj\n' + objs[i] + '\nendobj\n'; }
+  const xpos = l1len(file);
+  file += 'xref\n0 ' + (objs.length + 1) + '\n0000000000 65535 f \n';
+  offs.forEach(o => { file += ('0000000000' + o).slice(-10) + ' 00000 n \n'; });
+  file += 'trailer\n<< /Size ' + (objs.length + 1) + ' /Root 1 0 R >>\nstartxref\n' + xpos + '\n%%EOF';
+  return new Blob([l1bytes(file)], { type: 'application/pdf' });
+}
+
+// ---- Admin panel ----
+const ADMIN_LOGIN = 'admin';
+const ADMIN_PASS_HASH = 'f8a7a552fbaefadc8d4a3d288f53b60fee8c35cf604864af98b883f819dc4111';
+
+function sha256(text) {
+  if (crypto && crypto.subtle) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(buf =>
+      Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('')
+    );
+  }
+  return Promise.resolve(text);
+}
+
+function openAdminAuth() {
+  document.getElementById('authModal').classList.add('show');
+  const block = JSON.parse(localStorage.getItem('vs_admin_block') || 'null');
+  const hint = document.getElementById('authAttemptNote');
+  document.getElementById('authUser').disabled = false;
+  document.getElementById('authPass').disabled = false;
+  if (block && Date.now() < block.until) {
+    const h = Math.max(1, Math.ceil((block.until - Date.now()) / 3600000));
+    hint.innerHTML = '<i class="bi bi-shield-lock-fill"></i> ' + tf('adm_block_hint', h);
+  } else {
+    hint.innerHTML = '';
+  }
+}
+
+function adminLogin() {
+  const u = document.getElementById('authUser').value.trim();
+  const p = document.getElementById('authPass').value;
+  sha256(p).then(hash => {
+    if (u === ADMIN_LOGIN && hash === ADMIN_PASS_HASH) {
+      localStorage.removeItem('vs_admin_attempts');
+      localStorage.removeItem('vs_admin_block');
+      sessionStorage.setItem('vs_admin', '1');
+      document.getElementById('authModal').classList.remove('show');
+      openAdminPanel();
+      toast(t('toast_admin_welcome'));
+      return;
+    }
+    const attempts = JSON.parse(localStorage.getItem('vs_admin_attempts') || '{"n":0,"first":0}');
+    const block = JSON.parse(localStorage.getItem('vs_admin_block') || 'null');
+    if (block && Date.now() < block.until) {
+      toast(t('toast_pass_blocked'));
+      return;
+    }
+    const now = Date.now();
+    if (attempts.first && now - attempts.first > 3600000) { attempts.n = 0; attempts.first = now; }
+    if (!attempts.first) { attempts.first = now; }
+    attempts.n++;
+    localStorage.setItem('vs_admin_attempts', JSON.stringify(attempts));
+    const remaining = 3 - attempts.n;
+    const hint = document.getElementById('authAttemptNote');
+    if (attempts.n >= 3) {
+      const until = now + 1000 * 60 * 60 * 24;
+      localStorage.setItem('vs_admin_block', JSON.stringify({ until }));
+      localStorage.removeItem('vs_admin_attempts');
+      hint.innerHTML = '<i class="bi bi-shield-lock-fill"></i> ' + tf('adm_block24_msg', 24);
+      toast(t('adm_block24_toast'));
+    } else {
+      hint.innerHTML = '<i class="bi bi-exclamation-circle"></i> ' + tf('hint_bad_login', remaining);
+      toast(tf('toast_bad_login', remaining));
+    }
+  });
+}
+function openAdminPanel() {
+  renderStats();
+  renderAdminList();
+  document.getElementById('adminPanel').classList.add('show');
+  showTab('stats', document.querySelector('.at[data-tab="stats"]'));
+}
+function closeAdminPanel() { document.getElementById('adminPanel').classList.remove('show'); }
+function logoutAdmin() { sessionStorage.removeItem('vs_admin'); closeAdminPanel(); toast(t('toast_admin_out')); }
+
+function showTab(name, btn) {
+  ['stats', 'list', 'cats', 'add'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
+  });
+  document.querySelectorAll('.at').forEach(b => b.classList.toggle('active', b === btn));
+  if (name === 'stats') renderStats();
+  if (name === 'list') renderAdminList();
+  if (name === 'cats') renderCatAdminList();
+}
+
+function getCatCount(name) {
+  return allBooks().filter(b => (b.genre || '') === name).length;
+}
+
+function renderCatAdminList() {
+  const all = getCategories();
+  document.getElementById('catListTitle').textContent = tf('adm_cat_list', all.length);
+  document.getElementById('catAdminList').innerHTML = all.map((c, i) => {
+    const isCustom = i >= categories.length;
+    const bookCount = isCustom ? getCatCount(c.name) : (c.count || 0);
+    return `
+      <div class="al-row">
+        <span class="al-ic" style="background:${c.color}"><i class="bi ${esc(c.icon)}"></i></span>
+        <div class="al-info">
+          <b>${esc(c.name)}</b>
+          <span>${bookCount} ${t('kitob')}${isCustom ? '' : ' • ' + t('adm_std')}</span>
+        </div>
+        ${isCustom ? `<button class="al-del" title="${t('adm_del_title')}" onclick="deleteCategory(${i})"><i class="bi bi-trash"></i></button>` : ''}
+      </div>`;
+  }).join('');
+  applyIcons();
+}
+
+function addCategory() {
+  const name = document.getElementById('cName').value.trim();
+  if (!name) return toast(t('toast_cat_name'));
+  const icon = document.getElementById('cIcon').value;
+  const color = document.getElementById('cColor').value;
+  let custom = [];
+  try { custom = JSON.parse(localStorage.getItem('vs_cats') || '[]'); } catch (e) { custom = []; }
+  if (getCategories().some(c => c.name.toLowerCase() === name.toLowerCase())) {
+    return toast(t('toast_cat_exists'));
+  }
+  custom.push({ icon, name, count: 0, color });
+  localStorage.setItem('vs_cats', JSON.stringify(custom));
+  document.getElementById('cName').value = '';
+  renderCategories();
+  renderCatAdminList();
+  updateGenreOptions();
+  renderStats();
+  toast(tf('toast_cat_added', name));
+}
+
+function deleteCategory(i) {
+  let custom = [];
+  try { custom = JSON.parse(localStorage.getItem('vs_cats') || '[]'); } catch (e) { custom = []; }
+  const ci = i - categories.length;
+  const target = custom[ci];
+  if (!target) return toast(t('toast_cat_std'));
+  if (!confirm(tf('confirm_del_cat', target.name))) return;
+  custom.splice(ci, 1);
+  localStorage.setItem('vs_cats', JSON.stringify(custom));
+  renderCategories();
+  renderCatAdminList();
+  updateGenreOptions();
+  renderStats();
+  toast(t('toast_cat_del'));
+}
+
+function updateGenreOptions() {
+  const sel = document.getElementById('fGenre');
+  const names = getCategories().map(c => c.name);
+  names.forEach(n => {
+    const exists = [...sel.options].some(o => o.value === n);
+    if (!exists) {
+      const o = document.createElement('option');
+      o.value = n;
+      o.textContent = n;
+      sel.appendChild(o);
+    }
+  });
+}
+
+function renderStats() {
+  const all = allBooks();
+  const dl = +(localStorage.getItem('vs_downloads') || 0);
+  const views = +(localStorage.getItem('vs_views') || 0);
+  const users = getUsers();
+  const free = all.filter(b => b.free !== false).length;
+  const byGenre = {};
+  all.forEach(b => { const g = b.genre || 'Badiiy'; byGenre[g] = (byGenre[g] || 0) + 1; });
+  const max = Math.max(1, ...Object.values(byGenre));
+  const bars = Object.entries(byGenre).sort((a, b) => b[1] - a[1]).map(([g, c]) => `
+    <div class="genre-bar">
+      <span class="gb-label">${g}</span>
+      <span class="gb-track"><span class="gb-fill" style="width:${Math.round(c / max * 100)}%"></span></span>
+      <span class="gb-val">${c}</span>
+    </div>`).join('');
+  const usersHtml = users.length
+    ? users.map(u => `<div class="al-row"><div class="al-info"><b>${esc(u.name)}</b><span>${esc(u.email)}</span></div></div>`).join('')
+    : '<p class="hint">' + t('adm_no_users') + '</p>';
+  document.getElementById('tab-stats').innerHTML = `
+    <div class="stat-grid">
+      <div class="stat-card blue"><i class="bi bi-book"></i><b>${all.length}</b><span>${t('adm_s_total')}</span></div>
+      <div class="stat-card green"><i class="bi bi-download"></i><b>${dl}</b><span>${t('adm_s_dl')}</span></div>
+      <div class="stat-card purple"><i class="bi bi-people"></i><b>${users.length}</b><span>${t('adm_s_users')}</span></div>
+      <div class="stat-card orange"><i class="bi bi-gift"></i><b>${free}</b><span>${t('adm_s_free')}</span></div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card navy"><i class="bi bi-eye"></i><b>${views}</b><span>${t('adm_s_views')}</span></div>
+    </div>
+    <h4 class="typo-h4">${t('adm_s_genre')}</h4>
+    ${bars}
+    <h4 class="typo-h4">${t('adm_s_userlist')}</h4>
+    ${usersHtml}`;
+  applyIcons();
+}
+
+function renderAdminList() {
+  const all = allBooks();
+  document.getElementById('tab-list').innerHTML = `
+    <h4 class="typo-h4" style="margin-top:0">${tf('adm_total', all.length)}</h4>
+    ${all.map((b, i) => {
+      const isDb = b.pdf || dbBooks.includes(b);
+      const cs = coverSrc(b);
+      const icon = cs ? `<img src="${cs}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:8px" />` : `<i class="bi ${esc(b.icon || 'bi-book')}"></i>`;
+      return `
+        <div class="al-row">
+          <span class="al-ic" style="background:${gradients[i % gradients.length]}">${icon}</span>
+          <div class="al-info">
+            <b>${esc(b.title)}</b>
+            <span>${esc(b.author)} • ${esc(b.genre || 'Badiiy')} • ${b.free !== false ? t('free_badge') : (b.price || 0).toLocaleString() + ' ' + t('soum')}${isDb ? '' : ' • ' + t('adm_demo')}</span>
+          </div>
+          <button class="al-del" title="${t('adm_del_title')}" onclick="deleteBook(${i})" ${isDb ? '' : 'disabled'}><i class="bi bi-trash"></i></button>
+        </div>`;
+    }).join('')}`;
+  applyIcons();
+}
+
+async function deleteBook(i) {
+  const b = allBooks()[i];
+  if (!b) return;
+  if (dbBooks.includes(b)) {
+    if (!confirm(tf('confirm_del_book', b.title))) return;
+    await removeBookFromDb(b.id);
+    dbBooks = dbBooks.filter(x => x.id !== b.id);
+    toast(t('toast_book_del'));
+  } else {
+    toast(t('toast_demo'));
+    return;
+  }
+renderCategories();
+updateGenreOptions();
+renderBooks();
+  renderAdminList();
+}
+
+let chosenPdf = null;
+let chosenImage = null;
+let chosenAudio = null;
+async function fileToBase64(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  let bin = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+  }
+  return btoa(bin);
+}
+function randUploadId() {
+  if (crypto && crypto.randomUUID) return crypto.randomUUID().replace(/-/g, '');
+  const a = new Uint8Array(16);
+  (crypto.getRandomValues || (m => m.map(() => (Math.random() * 256) | 0)))(a);
+  return Array.from(a, x => x.toString(16).padStart(2, '0')).join('');
+}
+async function sliceToBase64(file, start, end) {
+  const bytes = new Uint8Array(await file.slice(start, end).arrayBuffer());
+  let bin = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+  }
+  return btoa(bin);
+}
+async function uploadSmall(file) {
+  const body = JSON.stringify({ name: file.name, base64: await fileToBase64(file) });
+  const r = await fetch('/upload', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body
+  });
+  let j = {};
+  try { j = await r.json(); } catch (e) {}
+  if (!r.ok || !j.url) throw new Error(j.error || 'CDN ga yuklashda xatolik');
+  return j.url;
+}
+async function uploadChunked(file) {
+  const CHUNK = 2800000;
+  const uploadId = randUploadId();
+  const ext = (file.name.match(/\.[a-z0-9]+$/i) || ['.bin'])[0].toLowerCase();
+  const n = Math.max(1, Math.ceil(file.size / CHUNK));
+  const max = 100 * 1024 * 1024;
+  if (file.size > max) throw new Error('Fayl juda katta! Maksimal hajm: 100 MB');
+  try {
+    for (let i = 0; i < n; i++) {
+      const b64 = await sliceToBase64(file, i * CHUNK, Math.min(file.size, (i + 1) * CHUNK));
+      const r = await fetch('/upload/part', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uploadId, index: i, base64: b64 })
+      });
+      let j = {};
+      try { j = await r.json(); } catch (e2) {}
+      if (!r.ok || !j.ok) throw new Error(j.error || 'CDN ga yuklashda xatolik');
+      if (i + 1 === n || (i + 1) % 5 === 0) toast(t('toast_uploading') + ' (' + (i + 1) + '/' + n + ')');
+    }
+    const r = await fetch('/upload/finish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ uploadId, ext, totalParts: n, totalBytes: file.size })
+    });
+    let j = {};
+    try { j = await r.json(); } catch (e2) {}
+    if (!r.ok || !j.url) throw new Error(j.error || 'CDN ga yuklashda xatolik');
+    return j.url;
+  } catch (e) {
+    try { fetch('/upload/abort', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ uploadId }) }); } catch (e2) {}
+    throw e;
+  }
+}
+async function uploadToCdn(file) {
+  if (file.size > 3000000) return uploadChunked(file);
+  return uploadSmall(file);
+}
+document.getElementById('fPdf').addEventListener('change', () => {
+  chosenPdf = document.getElementById('fPdf').files[0] || null;
+  if (chosenPdf) chosenAudio = null;
+  document.getElementById('fPdfName').textContent = chosenPdf ? chosenPdf.name : t('adm_pdf_pick');
+  updateAiDescBtn();
+});
+document.getElementById('fAudio').addEventListener('change', () => {
+  chosenAudio = document.getElementById('fAudio').files[0] || null;
+  if (chosenAudio) chosenPdf = null;
+  document.getElementById('fPdfName').textContent = chosenPdf || chosenAudio ? (chosenAudio ? '—' : chosenPdf.name) : t('adm_pdf_pick');
+  document.getElementById('fAudioName').textContent = chosenAudio ? chosenAudio.name : t('adm_audio_pick');
+});
+document.getElementById('fImageFile').addEventListener('change', () => {
+  const f = document.getElementById('fImageFile').files[0] || null;
+  chosenImage = f || null;
+  const prev = document.getElementById('fImagePrev');
+  document.getElementById('fImageName').textContent = f ? f.name : t('adm_img_pick');
+  if (f) {
+    prev.style.backgroundImage = 'url(' + URL.createObjectURL(f) + ')';
+    prev.style.display = 'block';
+  } else {
+    prev.style.display = 'none';
+    prev.style.backgroundImage = '';
+  }
+});
+function previewImageUrl() {
+  const url = document.getElementById('fImageUrl').value.trim();
+  const prev = document.getElementById('fImagePrev');
+  if (url) {
+    prev.style.backgroundImage = 'url(' + url.replace(/"/g, '\\"') + ')';
+    prev.style.display = 'block';
+  } else {
+    prev.style.display = 'none';
+    prev.style.backgroundImage = '';
+  }
+}
+document.getElementById('fImageUrl').addEventListener('input', previewImageUrl);
+
+function isLocal() {
+  const hn = location.hostname;
+  return hn === 'localhost' || hn === '127.0.0.1' || hn === '[::1]' || hn === '::1';
+}
+function updateAiDescBtn() {
+  const btn = document.getElementById('aiDescBtn');
+  if (!btn) return;
+  const pdf = document.getElementById('fPdf').files[0] || null;
+  if (!isLocal() || !pdf) { btn.style.display = 'none'; return; }
+  btn.style.display = 'block';
+  btn.disabled = true;
+  btn.title = t('adm_ai_desc_offline');
+  fetch('/ai-desc', { method: 'GET' })
+    .then(r => r.json())
+    .then(j => {
+      btn.disabled = !(j && j.online && j.model);
+      btn.title = (j && j.online && j.model) ? '' : t('adm_ai_desc_offline');
+    })
+    .catch(() => { btn.disabled = true; btn.title = t('adm_ai_desc_offline'); });
+}
+async function aiDescFromPdf() {
+  const btn = document.getElementById('aiDescBtn');
+  const file = document.getElementById('fPdf').files[0];
+  if (!file) { toast(t('adm_ai_desc_pdf')); return; }
+  const ta = document.getElementById('fAbout');
+  if (btn) { btn.disabled = true; btn.innerHTML = '<i class="bi bi-hourglass-split"></i> ' + t('adm_ai_desc_busy'); }
+  try {
+    const buf = await file.arrayBuffer();
+    const doc = await pdfjsLib.getDocument({ data: buf, isEvalSupported: false }).promise;
+    let txt = '';
+    const pages = Math.min(doc.numPages, 15);
+    for (let p = 1; p <= pages; p++) {
+      const page = await doc.getPage(p);
+      const tc = await page.getTextContent();
+      txt += tc.items.map(it => (it && it.str) || '').join(' ') + '\n';
+      if (txt.length > 6000) break;
+    }
+    try { doc.destroy(); } catch (e) {}
+    if (!txt.trim()) throw new Error('empty');
+    const r = await fetch('/ai-desc', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: txt.slice(0, 6000), lang: curLang })
+    });
+    let j = {};
+    try { j = await r.json(); } catch (e) {}
+    if (!r.ok || !j.desc) throw new Error(j.error || 'bad');
+    ta.value = j.desc;
+    toast(t('adm_ai_desc_ok'));
+  } catch (e) {
+    toast(e.message === 'offline' ? t('adm_ai_desc_offline') : t('adm_ai_desc_err'));
+  }
+  if (btn) { btn.innerHTML = '<i class="bi bi-magic"></i> <span data-i18n="adm_ai_desc">' + t('adm_ai_desc') + '</span>'; updateAiDescBtn(); }
+}
+
+async function countPdfPages(url) {
+  try {
+    const r = await fetch(proxyMedia(url));
+    if (!r.ok) return null;
+    const doc = await pdfjsLib.getDocument({ data: await r.arrayBuffer() }).promise;
+    const n = doc.numPages;
+    try { doc.destroy(); } catch (e) {}
+    return n;
+  } catch (e) { return null; }
+}
+
+let addingBook = false;
+async function addBook() {
+  if (addingBook) return toast(t('toast_add_busy'));
+  const title = document.getElementById('fTitle').value.trim();
+  const author = document.getElementById('fAuthor').value.trim();
+  const about = document.getElementById('fAbout').value.trim();
+  const genre = document.getElementById('fGenre').value;
+  const free = document.getElementById('fFree').checked;
+  const price = +document.getElementById('fPrice').value || 0;
+  const year = parseInt(document.getElementById('fYear').value, 10);
+  const volume = (document.getElementById('fVolume').value || '').trim();
+  if (!title) return toast(t('toast_book_title'));
+  if (!author) return toast(t('toast_book_author'));
+  if (!chosenPdf && !chosenAudio) return toast(t('toast_book_file'));
+  const imageUrl = document.getElementById('fImageUrl').value.trim();
+  if (!imageUrl && !chosenImage) return toast(t('toast_book_cover'));
+  const isAudio = !!chosenAudio && !chosenPdf;
+  const dup = allBooks().find(x =>
+    (x.title || '').toLowerCase().trim() === title.toLowerCase().trim() &&
+    (x.author || '').toLowerCase().trim() === author.toLowerCase().trim()
+  );
+  if (dup) {
+    const yes = confirm(tf('confirm_dup', dup.title));
+    if (!yes) return toast(t('toast_dup_no'));
+  }
+  addingBook = true;
+  try {
+    toast(t('toast_uploading'));
+    const pdfUrl = chosenPdf ? await uploadToCdn(chosenPdf) : null;
+    const audioUrl = chosenAudio ? await uploadToCdn(chosenAudio) : null;
+    const coverUrl = chosenImage ? await uploadToCdn(chosenImage) : imageUrl;
+    const pages = pdfUrl ? await countPdfPages(pdfUrl) : null;
+    await addBookToDb({ title, author, about, genre, free, price, year: isNaN(year) ? null : year, volume, pages, pdfUrl, audioUrl, coverUrl, icon: isAudio ? 'bi-headphones' : 'bi-book', type: isAudio ? 'audio' : 'pdf', added: Date.now() });
+  } catch (e) {
+    addingBook = false;
+    return toast(tf('toast_upload_err', e.message));
+  }
+  addingBook = false;
+  document.getElementById('fTitle').value = '';
+  document.getElementById('fAuthor').value = '';
+  document.getElementById('fAbout').value = '';
+  document.getElementById('fPrice').value = 0;
+  document.getElementById('fYear').value = '';
+  document.getElementById('fVolume').value = '';
+  document.getElementById('fFree').checked = true;
+  document.getElementById('fImageUrl').value = '';
+  document.getElementById('fImagePrev').style.backgroundImage = '';
+  chosenPdf = null;
+  chosenImage = null;
+  chosenAudio = null;
+  document.getElementById('fPdfName').textContent = t('adm_pdf_pick');
+  document.getElementById('fAudioName').textContent = t('adm_audio_pick');
+  document.getElementById('fImageName').textContent = t('adm_img_pick');
+  document.getElementById('fImagePrev').style.display = 'none';
+  toast(t('toast_book_added'));
+  loadDbBooks();
+  showTab('list', document.querySelector('.at[data-tab="list"]'));
+}
+
+// ---- Toast va modal yopish ----
+let toastTimer = null;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.innerHTML = '<i class="bi bi-check-circle-fill" style="color:#34d399"></i> ' + msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2600);
+  applyIcons();
+}
+
+['authModal', 'userAuthModal'].forEach(id => {
+  document.getElementById(id).addEventListener('click', e => {
+    if (e.target === e.currentTarget) e.currentTarget.classList.remove('show');
+  });
+});
+document.getElementById('adminPanel').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeAdminPanel();
+});
+
+renderBooks();
+applyIcons();
+setTimeout(applyIcons, 200);
+
+// ---- Kod ko'rishdan himoya ----
+let _warnT = null;
+function blockWarn() {
+  const w = document.getElementById('warnModal');
+  if (!w) return;
+  w.classList.add('show');
+  clearTimeout(_warnT);
+  _warnT = setTimeout(() => w.classList.remove('show'), 2400);
+}
+function closeWarn() {
+  document.getElementById('warnModal').classList.remove('show');
+  clearTimeout(_warnT);
+}
+document.getElementById('warnModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeWarn(); });
+function isBlockedKey(e) {
+  const c = e.ctrlKey || e.metaKey;
+  const k = typeof e.key === 'string' ? e.key.toUpperCase() : '';
+  return e.key === 'F12'
+    || e.key === 'F7'
+    || (c && e.shiftKey && ['I', 'J', 'C', 'U', 'K', 'P', 'E', 'F', 'R'].includes(k))
+    || (c && ['U', 'S', 'P'].includes(k));
+}
+function handleBlock(e) {
+  if (isBlockedKey(e)) {
+    e.preventDefault();
+    e.stopPropagation();
+    blockWarn();
+    return true;
+  }
+  return false;
+}
+for (const t of [document, window]) {
+  t.addEventListener('keydown', handleBlock, { capture: true });
+  t.addEventListener('keyup', e => { if (isBlockedKey(e)) { e.preventDefault(); e.stopPropagation(); } }, { capture: true });
+  t.addEventListener('keypress', e => { if (isBlockedKey(e)) { e.preventDefault(); e.stopPropagation(); } }, { capture: true });
+}
+document.documentElement.setAttribute('onkeydown', 'return (function(e){ if((e.ctrlKey||e.metaKey)&&(e.key==="u"||e.key==="U"||e.key==="s"||e.key==="S"||e.key==="p"||e.key==="P")||e.key==="F12"||((e.ctrlKey||e.metaKey)&&e.shiftKey)){ e.preventDefault(); return false; } return true; })(event)');
+document.addEventListener('contextmenu', e => {
+  const t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+  e.preventDefault();
+  e.stopPropagation();
+  blockWarn();
+}, { capture: true });
+document.addEventListener('selectstart', e => {
+  const t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+  e.preventDefault();
+});
+document.addEventListener('dragstart', e => { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+window.addEventListener('beforeprint', () => blockWarn());
+window.addEventListener('blur', () => { try { closeWarn(); } catch (e) {} });
+
+// ---- Til tanlash ----
+const langSel = document.getElementById('langSel');
+if (langSel) langSel.addEventListener('change', e => applyLang(e.target.value));
+
+function applyLangUI(lang) {
+  const img = document.getElementById('fImageName');
+  const pdf = document.getElementById('fPdfName');
+  const aud = document.getElementById('fAudioName');
+  if (img && !(document.getElementById('fImageFile') && document.getElementById('fImageFile').files.length)) img.textContent = t('adm_img_pick');
+  if (pdf && !(document.getElementById('fPdf') && document.getElementById('fPdf').files.length)) pdf.textContent = t('adm_pdf_pick');
+  if (aud && !(document.getElementById('fAudio') && document.getElementById('fAudio').files.length)) aud.textContent = t('adm_audio_pick');
+  aiSugs();
+  if (document.getElementById('userAuthModal').classList.contains('show') && typeof showUserAuth === 'function') showUserAuth(uaMode);
+  if (document.getElementById('authModal').classList.contains('show')) openAdminAuth();
+}
+const _applyLangBase = applyLang;
+applyLang = function (lang) { _applyLangBase(lang); applyLangUI(lang); };
+(function initLang() {
+  let saved = 'uz';
+  try { saved = localStorage.getItem('vs_lang') || 'uz'; } catch (e) {}
+  applyLang(saved);
+})();
+
+// ---- AI yordamchi ----
+let aiOpen = false;
+let aiBook = null;
+let aiBusy = false;
+function setAICtx(b) {
+  aiBook = b || null;
+  const bar = document.getElementById('aiCtxBar');
+  const txt = document.getElementById('aiCtxTxt');
+  if (!bar || !txt) return;
+  if (aiBook && aiBook.title) {
+    bar.style.display = 'flex';
+    txt.textContent = tf('ai_ctx_book', String(aiBook.title));
+  } else {
+    bar.style.display = 'none';
+    txt.textContent = t('ai_ctx_none');
+  }
+}
+function aiPush(html, cls) {
+  const box = document.getElementById('aiMsgs');
+  if (!box) return null;
+  const isUser = cls.indexOf('ai-u') === 0;
+  const row = document.createElement('div');
+  row.className = 'ai-row' + (isUser ? ' ai-row-u' : '');
+  const ava = document.createElement('span');
+  ava.className = 'ai-ava ' + (isUser ? 'ai-ava-u' : 'ai-ava-b');
+  ava.innerHTML = isUser ? '<i class="bi bi-person"></i>' : '<i class="bi bi-robot"></i>';
+  const div = document.createElement('div');
+  div.className = 'ai-msg ' + cls;
+  div.innerHTML = html;
+  row.appendChild(ava);
+  row.appendChild(div);
+  box.appendChild(row);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+function toggleAI() {
+  const p = document.getElementById('aiPanel');
+  const f = document.getElementById('aiFab');
+  if (!p) return;
+  aiOpen = !aiOpen;
+  p.classList.toggle('show', aiOpen);
+  if (f) f.setAttribute('aria-expanded', String(aiOpen));
+  if (aiOpen) {
+    const box = document.getElementById('aiMsgs');
+    if (box && !box.children.length) aiPush('<i class="bi bi-robot"></i> ' + esc(t('ai_greet')), 'ai-a');
+    aiSugs();
+    const inp = document.getElementById('aiText');
+    if (inp) setTimeout(() => inp.focus(), 60);
+  }
+}
+function aiSugs() {
+  const bar = document.getElementById('aiSugs');
+  if (!bar) return;
+  const items = [
+    { i: 'bi-journal-bookmark-fill', k: 'ai_sug1' },
+    { i: 'bi-stars', k: 'ai_sug2' },
+    { i: 'bi-download', k: 'ai_sug3' }
+  ];
+  bar.innerHTML = items.map(s => '<button type="button" onclick="aiSugAsk(\'' + s.k + '\')"><i class="bi ' + s.i + '"></i> ' + esc(t(s.k)) + '</button>').join('');
+}
+function aiSugAsk(k) {
+  const inp = document.getElementById('aiText');
+  if (!inp) return;
+  inp.value = t(k);
+  askAI();
+}
+function clearAICtx() { setAICtx(null); }
+function clearAIChat() {
+  const box = document.getElementById('aiMsgs');
+  if (box) box.innerHTML = '';
+  aiPush('<i class="bi bi-robot"></i> ' + esc(t('ai_greet')), 'ai-a');
+}
+let aiBookTextCache = '';
+let aiBookTextKey = '';
+
+function aiBookTextSign(b) {
+  const s = b && (b.pdfUrl || (b.pdf && b.pdf.name)) || '';
+  const sz = b && b.pdf && b.pdf.size || '';
+  return String(s) + '|' + sz;
+}
+
+async function extractTextFromBuf(buf) {
+  if (!window.pdfjsLib || !buf) return '';
+  try {
+    if (!pdfjsLib.GlobalWorkerOptions.workerSrc) pdfjsLib.GlobalWorkerOptions.workerSrc = 'vendor/pdf.worker.min.js';
+    const doc = await pdfjsLib.getDocument({ data: buf, isEvalSupported: false }).promise;
+    let txt = '';
+    const pages = Math.min(doc.numPages, 100);
+    for (let p = 1; p <= pages; p++) {
+      if (txt.length > 75000) break;
+      const page = await doc.getPage(p);
+      const tc = await page.getTextContent();
+      txt += tc.items.map(it => (it && it.str) || '').join(' ') + '\n';
+      try { if (page.cleanup) page.cleanup(); } catch (e) {}
+    }
+    try { doc.destroy(); } catch (e) {}
+    return txt.slice(0, 80000);
+  } catch (e) { return ''; }
+}
+
+async function extractBookText(b) {
+  try {
+    return await extractTextFromBuf(await fetchBookPdfBuffer(b));
+  } catch (e) { return ''; }
+}
+
+async function aiReadContext(typing) {
+  let src = null;
+  if (aiBook && (aiBook.pdfUrl || aiBook.pdf)) src = aiBook;
+  else if (typeof chosenPdf !== 'undefined' && chosenPdf) src = { pdf: chosenPdf };
+  if (!src) return '';
+  const sign = src === aiBook ? aiBookTextSign(aiBook) : 'chosen|' + chosenPdf.name + '|' + chosenPdf.size;
+  if (aiBookTextKey === sign) return aiBookTextCache;
+  if (typing) typing.innerHTML = '<i class="bi bi-book"></i> ' + esc(t('ai_reading'));
+  let text = '';
+  if (src.pdf && src.pdf instanceof File) {
+    text = await extractTextFromBuf(await src.pdf.arrayBuffer());
+  } else {
+    text = await extractBookText(aiBook);
+  }
+  aiBookTextCache = text;
+  aiBookTextKey = sign;
+  if (!text && typing) aiPush('<i class="bi bi-info-circle"></i> ' + esc(t('ai_read_fail')), 'ai-a');
+  return text;
+}
+
+async function askAI() {
+  const inp = document.getElementById('aiText');
+  const q = (inp && inp.value || '').trim();
+  if (!q || aiBusy) return;
+  aiPush(esc(q), 'ai-u');
+  if (inp) inp.value = '';
+  const typing = aiPush('<i class="bi bi-stars"></i> ' + esc(t('ai_thinking')), 'ai-a ai-typing');
+  aiBusy = true;
+  const book = aiBook ? { title: aiBook.title, author: aiBook.author, genre: aiBook.genre, year: aiBook.year, volume: aiBook.volume, desc: aiBook.desc || aiBook.about || '' } : null;
+  let bodyText = '';
+  try {
+    bodyText = await aiReadContext(typing);
+    const r = await fetch('/ai', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ q: q, lang: curLang, book: book, text: bodyText })
+    });
+    let data = {};
+    try { data = await r.json(); } catch (e) {}
+    if (!r.ok || !data.answer) throw new Error(data.error || 'bad');
+    if (typing) typing.remove();
+    aiPush(esc(data.answer), 'ai-a');
+  } catch (e) {
+    if (typing) typing.remove();
+    aiPush('<i class="bi bi-exclamation-circle"></i> ' + esc(t('ai_err')), 'ai-a');
+  }
+  aiBusy = false;
+}
+</script>
+</body>
+</html>

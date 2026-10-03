@@ -1,0 +1,5 @@
+server.ps1
+config.json
+node_modules
+*.log
+.vercel

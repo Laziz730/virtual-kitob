@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "api/upload.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/upload", "destination": "/api/upload" },
+    { "source": "/upload/part", "destination": "/api/upload" },
+    { "source": "/upload/finish", "destination": "/api/upload" },
+    { "source": "/upload/abort", "destination": "/api/upload" },
+    { "source": "/engage", "destination": "/api/engage" },
+    { "source": "/ai", "destination": "/api/ai" },
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/cdn/:path*", "destination": "https://yuristakademiya.b-cdn.net/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
